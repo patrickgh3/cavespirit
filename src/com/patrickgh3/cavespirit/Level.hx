@@ -57,6 +57,12 @@ class Level
 		// load entities
 		for (layer in xml.elementsNamed("entities"))
 		{
+			for (ent in layer.elementsNamed("Torch"))
+			{
+				x = Std.parseInt(ent.get("x"));
+				y = Std.parseInt(ent.get("y"));
+				HXP.scene.add(new Torch(x, y));
+			}
 			for (ent in layer.elementsNamed("NPCHuman"))
 			{
 				x = Std.parseInt(ent.get("x"));
