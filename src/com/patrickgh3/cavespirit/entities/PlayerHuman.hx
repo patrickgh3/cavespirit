@@ -17,7 +17,7 @@ class PlayerHuman extends Human
 	{
 		var right:Bool = Input.check(Key.D);
 		var left:Bool = Input.check(Key.A);
-		var jump:Bool = Input.pressed(Key.W);
+		var jump:Bool = Input.pressed(Key.W) || Input.pressed(Key.SPACE);
 		
 		if (right) super.walkRight();
 		else if (left) super.walkLeft();

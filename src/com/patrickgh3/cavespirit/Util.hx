@@ -19,10 +19,16 @@ class Util
 			return true;
 		}
 		
+		// test the corners of the entity and a few midpoints to see if any are in a solid tile.
 		var x1:Int = Math.floor(e.x / Level.tilewidth);
 		var x2:Int = Math.floor((e.x + e.width - 1) / Level.tilewidth);
+		var x3:Int = Std.int((x1 + x2) / 2);
 		var y1:Int = Math.floor(e.y / Level.tileheight);
 		var y2:Int = Math.floor((e.y + e.height - 1) / Level.tileheight);
+		
+		var y4:Int = Std.int((y1 + y2) / 2);
+		var y3:Int = Std.int((y4 + y1) / 2);
+		var y5:Int = Std.int((y4 + y2) / 2);
 		//if (e.x < 0) x1 = -1;
 		//if (e.y < 0) y1 = -1;
 		//x1 = cast(Math.min(x1, Level.levelwidth), Int);
@@ -34,7 +40,15 @@ class Util
 		return Level.mask[x1][y1] == 1
 			|| Level.mask[x1][y2] == 1
 			|| Level.mask[x2][y1] == 1
-			|| Level.mask[x2][y2] == 1;
+			|| Level.mask[x2][y2] == 1
+			|| Level.mask[x3][y1] == 1
+			|| Level.mask[x3][y2] == 1
+			|| Level.mask[x1][y3] == 1
+			|| Level.mask[x1][y4] == 1
+			|| Level.mask[x1][y5] == 1
+			|| Level.mask[x2][y3] == 1
+			|| Level.mask[x2][y4] == 1
+			|| Level.mask[x2][y5] == 1;
 	}
 	
 	public static function isoffscreen(e:Entity):Bool
