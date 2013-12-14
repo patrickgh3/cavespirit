@@ -57,6 +57,21 @@ class Level
 		// load entities
 		for (layer in xml.elementsNamed("entities"))
 		{
+			for (ent in layer.elementsNamed("NPCHuman"))
+			{
+				x = Std.parseInt(ent.get("x"));
+				y = Std.parseInt(ent.get("y"));
+				var b:Int = Std.parseInt(ent.get("behavior"));
+				var m:String = ent.get("message");
+				HXP.scene.add(new NPCHuman(x, y, b, m));
+			}
+			for (ent in layer.elementsNamed("NPCFairy"))
+			{
+				x = Std.parseInt(ent.get("x"));
+				y = Std.parseInt(ent.get("y"));
+				var m:String = ent.get("message");
+				HXP.scene.add(new NPCFairy(x, y, null, m)); // TODO: partner fairies!
+			}
 			for (ent in layer.elementsNamed("PlayerHuman"))
 			{
 				x = Std.parseInt(ent.get("x"));
@@ -69,6 +84,7 @@ class Level
 				y = Std.parseInt(ent.get("y"));
 				HXP.scene.add(new PlayerFairy(x, y));
 			}
+			
 		}
 		
 		// load tiles

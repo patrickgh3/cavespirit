@@ -61,6 +61,7 @@ class Human extends Entity
 			{
 				x -= diff;
 				//velocity.x = 0;
+				if (this._class == "com.patrickgh3.cavespirit.entities.NPCHuman") cast(this, NPCHuman).hadcollision = true; // this is so bad
 			}
 			i++;
 		}

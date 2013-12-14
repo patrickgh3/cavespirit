@@ -306,6 +306,9 @@
     <tile x="12" y="4" tx="0" ty="0" />
     <tile x="12" y="5" tx="0" ty="0" />
     <tile x="12" y="6" tx="0" ty="0" />
+    <tile x="12" y="14" tx="0" ty="0" />
+    <tile x="12" y="15" tx="0" ty="0" />
+    <tile x="12" y="16" tx="0" ty="0" />
     <tile x="12" y="17" tx="0" ty="0" />
     <tile x="12" y="18" tx="0" ty="0" />
     <tile x="12" y="19" tx="0" ty="0" />
@@ -328,6 +331,7 @@
     <tile x="13" y="4" tx="0" ty="0" />
     <tile x="13" y="5" tx="0" ty="0" />
     <tile x="13" y="6" tx="0" ty="0" />
+    <tile x="13" y="16" tx="0" ty="0" />
     <tile x="13" y="17" tx="0" ty="0" />
     <tile x="13" y="18" tx="0" ty="0" />
     <tile x="13" y="19" tx="0" ty="0" />
@@ -1437,5 +1441,7 @@
   <entities>
     <PlayerHuman id="0" x="32" y="112" />
     <PlayerFairy id="1" x="48" y="88" />
+    <NPCHuman id="2" x="96" y="88" behavior="1" message="test message" />
+    <NPCFairy id="3" x="72" y="80" behavior="0" message="none" />
   </entities>
 </level>

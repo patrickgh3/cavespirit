@@ -20,8 +20,6 @@ class GameScene extends Scene
 	public function new()
 	{
 		super();
-		
-		
 	}
 	
 	override public function update():Void

@@ -8,9 +8,16 @@ import com.haxepunk.Entity;
 class Util
 {
 	
-	public static function collidelevelmask(e:Entity):Bool
+	public static function collidelevelmask(e:Entity, xoffset:Int = 0, yoffset:Int = 0):Bool
 	{
-		if (isoffscreen(e)) return true;
+		e.x += xoffset;
+		e.y += yoffset;
+		if (isoffscreen(e))
+		{
+			e.x -= xoffset;
+			e.y -= yoffset;
+			return true;
+		}
 		
 		var x1:Int = Math.floor(e.x / Level.tilewidth);
 		var x2:Int = Math.floor((e.x + e.width - 1) / Level.tilewidth);
@@ -20,6 +27,9 @@ class Util
 		//if (e.y < 0) y1 = -1;
 		//x1 = cast(Math.min(x1, Level.levelwidth), Int);
 		//y1 = cast(Math.min(y1, Level.levelheight), Int);
+		
+		e.x -= xoffset;
+		e.y -= yoffset;
 		
 		return Level.mask[x1][y1] == 1
 			|| Level.mask[x1][y2] == 1
@@ -41,6 +51,11 @@ class Util
 		if (x > 0) return 1;
 		else if (x < 0) return -1;
 		else return 0;
+	}
+	
+	public static function randInt(n:Int):Int
+	{
+		return Math.floor(Math.random() * n);
 	}
 	
 }
