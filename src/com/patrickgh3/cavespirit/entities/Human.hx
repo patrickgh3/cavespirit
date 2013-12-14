@@ -2,6 +2,8 @@ package com.patrickgh3.cavespirit.entities;
 
 import com.haxepunk.Entity;
 import com.haxepunk.graphics.Spritemap;
+import com.haxepunk.HXP;
+import com.patrickgh3.cavespirit.scenes.GameScene;
 import flash.geom.Point;
 
 /**
@@ -56,7 +58,7 @@ class Human extends Entity
 		{
 			diff = Math.min(1, Math.abs(velocity.x) - i) * Util.sign(velocity.x);
 			x += diff;
-			collision = Util.collidelevelmask(this);
+			collision = Util.collidelevelmask(this) || x < HXP.camera.x || x + width > HXP.camera.x + GameScene.prefwidth;
 			if (collision)
 			{
 				x -= diff;

@@ -1,5 +1,6 @@
 package com.patrickgh3.cavespirit.entities;
 
+import com.haxepunk.HXP;
 import com.haxepunk.utils.Input;
 import com.haxepunk.utils.Key;
 
@@ -17,7 +18,7 @@ class PlayerFairy extends Fairy
 	{
 		if (Input.mousePressed)
 		{
-			super.flyToPoint(Input.mouseX, Input.mouseY);
+			super.flyToPoint(Std.int(HXP.camera.x) + Input.mouseX, Std.int(HXP.camera.y) + Input.mouseY);
 		}
 		
 		super.update();

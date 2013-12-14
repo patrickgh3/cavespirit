@@ -1,4 +1,6 @@
 package com.patrickgh3.cavespirit;
+
+import com.patrickgh3.cavespirit.scenes.GameScene;
 import com.haxepunk.Entity;
 import com.haxepunk.Graphic;
 import com.haxepunk.graphics.Image;
@@ -33,6 +35,7 @@ class Level
 		var x:Int;
 		var y:Int;
 		var path:String = "lvl/level" + Std.string(levelindex) + ".oel";
+		if (levelindex == -1) path = "lvl/leveltest.oel";
 		var xml:Xml = Xml.parse(Assets.getText(path)).firstElement();
 		
 		levelwidth = cast(Std.parseInt(xml.get("width")) / tilewidth, Int);
@@ -82,13 +85,13 @@ class Level
 			{
 				x = Std.parseInt(ent.get("x"));
 				y = Std.parseInt(ent.get("y"));
-				HXP.scene.add(new PlayerHuman(x, y));
+				HXP.scene.add(GameScene.human = new PlayerHuman(x, y));
 			}
 			for (ent in layer.elementsNamed("PlayerFairy"))
 			{
 				x = Std.parseInt(ent.get("x"));
 				y = Std.parseInt(ent.get("y"));
-				HXP.scene.add(new PlayerFairy(x, y));
+				HXP.scene.add(GameScene.fairy = new PlayerFairy(x, y));
 			}
 			
 		}
