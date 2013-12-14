@@ -1,0 +1,6 @@
+bin/*
+assets/font/*
+#assets/graphics/debug/*
+#assets/graphics/preloader/*
+openfl-readme.txt
+assets/openfl.svg
