@@ -3,6 +3,7 @@ package com.patrickgh3.cavespirit.entities;
 import com.haxepunk.Entity;
 import com.haxepunk.graphics.Spritemap;
 import com.haxepunk.HXP;
+import com.patrickgh3.cavespirit.scenes.GameScene;
 import flash.geom.Point;
 
 /**
@@ -16,6 +17,7 @@ class Fairy extends Entity
 	private var travelling:Bool = false;
 	private var target:Point;
 	private var targetrange:Int = 3;
+	private var light:Light;
 	
 	public function new(x:Int, y:Int) 
 	{
@@ -24,6 +26,9 @@ class Fairy extends Entity
 		target = new Point();
 		graphic = sprite = new Spritemap("gfx/fairy.png", 16, 16);
 		sprite.add("fly", [0, 1, 2, 3], 6);
+		light = new Light(0, 0, 1, 1);
+		GameScene.lighting.add(light);
+		layer = -3;
 	}
 	
 	override public function update():Void
@@ -39,6 +44,9 @@ class Fairy extends Entity
 		
 		x += velocity.x;
 		y += velocity.y;
+		
+		light.x = cast(x + 64 + 6, Int);
+		light.y = cast(y + 64 + 6, Int);
 		
 		if (velocity.x > 0) sprite.flipped = true;
 		else if (velocity.x < 0) sprite.flipped = false;

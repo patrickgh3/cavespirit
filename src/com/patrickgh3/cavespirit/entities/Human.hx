@@ -22,6 +22,7 @@ class Human extends Entity
 		sprite.add("idle", [0]);
 		sprite.add("walk", [1, 0], 4);
 		sprite.play("walk");
+		layer = -2;
 	}
 	
 	override public function update():Void
