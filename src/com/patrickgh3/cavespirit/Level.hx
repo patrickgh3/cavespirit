@@ -16,8 +16,8 @@ class Level
 	
 	public inline static var tilewidth:Int = 8;
 	public inline static var tileheight:Int = 8;
-	public static var levelwidth:Int = 20;
-	public static var levelheight:Int = 20;
+	public static var levelwidth:Int;
+	public static var levelheight:Int;
 	
 	private static var rect:Rectangle;
 	
@@ -34,6 +34,9 @@ class Level
 		var y:Int;
 		var path:String = "lvl/level" + Std.string(levelindex) + ".oel";
 		var xml:Xml = Xml.parse(Assets.getText(path)).firstElement();
+		
+		levelwidth = cast(Std.parseInt(xml.get("width")) / tilewidth, Int);
+		levelheight = cast(Std.parseInt(xml.get("height")) / tileheight, Int);
 		
 		// initialize mask
 		mask = new Array<Array<Int>>();
@@ -84,6 +87,7 @@ class Level
 				var g:Graphic = new Image("gfx/tileset.png", rect);
 				var e:Entity = new Entity(x * 8, y * 8, g);
 				HXP.scene.add(e);
+				mask[x][y] = 1;
 			}
 		}
 	}

@@ -23,6 +23,12 @@ class PlayerHuman extends Human
 		else if (left) super.walkLeft();
 		else super.walkStop();
 		
+		if (jump && onGround)
+		{
+			super.jump();
+			onGround = false;
+		}
+		
 		super.update();
 	}
 	
