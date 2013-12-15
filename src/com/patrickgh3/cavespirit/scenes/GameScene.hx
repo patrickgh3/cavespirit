@@ -35,10 +35,10 @@ class GameScene extends Scene
 	{
 		super.update();
 		
-		if (Input.pressed(Key.T)) changeLevel(-1);
-		else if (Input.pressed(Key.F)) changeLevel(0);
+		if (Input.pressed(Key.F)) changeLevel(0);
 		else if (Input.pressed(Key.G)) changeLevel(1);
 		else if (Input.pressed(Key.DIGIT_2)) changeLevel(2);
+		else if (Input.pressed(Key.DIGIT_3)) changeLevel(3);
 		
 		// camera (todo: smooth?)
 		if (fairy == null && human == null) return;
@@ -59,6 +59,11 @@ class GameScene extends Scene
 			camera.x = Std.int((fairy.x + human.x) / 2 - prefwidth / 2);
 			camera.y = Std.int((fairy.y + human.y) / 2 - prefheight / 2);
 		}
+		
+		camera.x = Math.max(0, camera.x);
+		camera.x = Math.min(Level.levelwidth * Level.tilewidth - prefwidth, camera.x);
+		camera.y = Math.max(0, camera.y);
+		camera.y = Math.min(Level.levelheight * Level.tileheight - prefheight, camera.y);
 		
 		if (Input.pressed(Key.R)) fadeoverlay.fadeout(-1);
 	}

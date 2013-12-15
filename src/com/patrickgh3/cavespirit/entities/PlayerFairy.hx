@@ -24,7 +24,15 @@ class PlayerFairy extends Fairy
 		super(x, y, "gfx/fairy.png");
 		sprite.flipped = true;
 		if (GameScene.human == null) light.scale = 0;
-		else partner = GameScene.human;
+		else
+		{
+			partner = GameScene.human;
+			if (cast(HXP.scene, GameScene).levelindex == 2)
+			{
+				count = holdtime + fadetime;
+				light.scale = 0;
+			}
+		}
 	}
 	
 	override public function update():Void
@@ -58,6 +66,11 @@ class PlayerFairy extends Fairy
 				updateLight();
 				heartcount = heartspeed - 1;
 			}
+		}
+		
+		if (collide("leveltrigger", x, y) != null)
+		{
+			GameScene.fadeoverlay.fadeout(-2);
 		}
 	}
 	

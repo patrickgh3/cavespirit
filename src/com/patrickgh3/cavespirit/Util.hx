@@ -16,7 +16,7 @@ class Util
 		{
 			e.x -= xoffset;
 			e.y -= yoffset;
-			return true;
+			return false;
 		}
 		
 		// test the corners of the entity and a few midpoints to see if any are in a solid tile.

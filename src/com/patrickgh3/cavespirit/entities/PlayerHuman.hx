@@ -33,8 +33,15 @@ class PlayerHuman extends Human
 		
 		super.update();
 		
-		// todo: if collision with death trigger, call fadeout.
-		//if (Input.pressed(Key.R)) GameScene.fadeoverlay.fadeout(-1);
+		if (collide("deathtrigger", x, y) != null)
+		{
+			GameScene.fadeoverlay.fadeout(-1);
+		}
+		
+		if (collide("leveltrigger", x, y) != null)
+		{
+			GameScene.fadeoverlay.fadeout(-2);
+		}
 	}
 	
 }

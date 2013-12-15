@@ -35,7 +35,6 @@ class Level
 		var x:Int;
 		var y:Int;
 		var path:String = "lvl/level" + Std.string(levelindex) + ".oel";
-		if (levelindex == -1) path = "lvl/leveltest.oel";
 		var xml:Xml = Xml.parse(Assets.getText(path)).firstElement();
 		
 		levelwidth = cast(Std.parseInt(xml.get("width")) / tilewidth, Int);
@@ -50,8 +49,9 @@ class Level
 			y = 0;
 			while (y < levelheight)
 			{
-				if (x == 0 || x == levelwidth - 1 || y == 0 || y == levelheight - 1) mask[x][y] = 1;
-				else mask[x][y] = 0;
+				//if (x == 0 || x == levelwidth - 1 || y == 0 || y == levelheight - 1) mask[x][y] = 1;
+				//else mask[x][y] = 0;
+				mask[x][y] = 0;
 				y++;
 			}
 			x++;
@@ -96,6 +96,30 @@ class Level
 				x = Std.parseInt(ent.get("x"));
 				y = Std.parseInt(ent.get("y"));
 				HXP.scene.add(GameScene.fairy = new PlayerFairy(x, y));
+			}
+			for (ent in layer.elementsNamed("DeathTrigger"))
+			{
+				x = Std.parseInt(ent.get("x"));
+				y = Std.parseInt(ent.get("y"));
+				var width:Int = Std.parseInt(ent.get("width"));
+				var height:Int = Std.parseInt(ent.get("height"));
+				var e:Entity = new Entity(x, y);
+				e.width = width;
+				e.height = height;
+				e.type = "deathtrigger";
+				HXP.scene.add(e);
+			}
+			for (ent in layer.elementsNamed("LevelTrigger"))
+			{
+				x = Std.parseInt(ent.get("x"));
+				y = Std.parseInt(ent.get("y"));
+				var width:Int = Std.parseInt(ent.get("width"));
+				var height:Int = Std.parseInt(ent.get("height"));
+				var e:Entity = new Entity(x, y);
+				e.width = width;
+				e.height = height;
+				e.type = "leveltrigger";
+				HXP.scene.add(e);
 			}
 			
 		}

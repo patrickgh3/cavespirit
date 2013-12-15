@@ -26,7 +26,7 @@ class NPCFairy extends Fairy
 			var t:Text = new Text(message, -48, -5);
 			t.size = 8;
 			text = new Entity(0, 0, t);
-			text.layer = -2;
+			text.layer = -4;
 			texthitbox = new Entity();
 			texthitbox.width = 64;
 			texthitbox.height = 32;

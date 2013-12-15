@@ -38,7 +38,7 @@ class NPCHuman extends Human
 			var t:Text = new Text(message, -32, -5);
 			t.size = 8;
 			text = new Entity(0, 0, t);
-			text.layer = -2;
+			text.layer = -4;
 			texthitbox = new Entity();
 			texthitbox.width = 48;
 			texthitbox.height = 32;
@@ -97,6 +97,7 @@ class NPCHuman extends Human
 			count = 0;
 			countgoal = 90 + Util.randInt(60);
 			state == state_wait;
+			sprite.flipped = false;
 		}
 		
 	}
