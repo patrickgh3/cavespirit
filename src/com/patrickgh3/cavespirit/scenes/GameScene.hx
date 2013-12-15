@@ -20,8 +20,8 @@ class GameScene extends Scene
 	public static var human:PlayerHuman;
 	public static var fairy:PlayerFairy;
 	
-	public inline static var prefwidth:Int = 256;
-	public inline static var prefheight:Int = 192;
+	public inline static var prefwidth:Int = 192;
+	public inline static var prefheight:Int = 144;
 
 	public function new()
 	{

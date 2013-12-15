@@ -9,7 +9,7 @@ class Main extends Engine
 {
     public function new()
 	{
-        super(256, 192, 60, true);
+        super(192, 144, 60, true);
     }
 	
     override public function init()
