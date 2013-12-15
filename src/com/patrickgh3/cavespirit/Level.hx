@@ -63,7 +63,7 @@ class Level
 			for (ent in layer.elementsNamed("Torch"))
 			{
 				x = Std.parseInt(ent.get("x"));
-				y = Std.parseInt(ent.get("y"));
+				y = Std.parseInt(ent.get("y")) + 4;
 				HXP.scene.add(new Torch(x, y));
 			}
 			for (ent in layer.elementsNamed("NPCHuman"))
@@ -88,7 +88,7 @@ class Level
 			for (ent in layer.elementsNamed("PlayerHuman"))
 			{
 				x = Std.parseInt(ent.get("x"));
-				y = Std.parseInt(ent.get("y"));
+				y = Std.parseInt(ent.get("y")) + 4;
 				HXP.scene.add(GameScene.human = new PlayerHuman(x, y));
 			}
 			for (ent in layer.elementsNamed("PlayerFairy"))

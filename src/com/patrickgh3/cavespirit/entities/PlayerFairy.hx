@@ -14,7 +14,7 @@ class PlayerFairy extends Fairy
 	private var partner:PlayerHuman;
 	private var count:Int = 0;
 	private var fadetime:Int = 420;
-	private var holdtime:Int = 120;
+	private var holdtime:Int = 60;
 	private var distance:Int = 20;
 	private var heartcount:Int = 0;
 	private var heartspeed:Int = 1;
@@ -22,6 +22,7 @@ class PlayerFairy extends Fairy
 	public function new(x:Int, y:Int) 
 	{
 		super(x, y, "gfx/fairy.png");
+		sprite.flipped = true;
 		if (GameScene.human == null) light.scale = 0;
 		else partner = GameScene.human;
 	}
@@ -39,8 +40,7 @@ class PlayerFairy extends Fairy
 		{
 			if (Math.pow(x + 4 - (partner.x + 4), 2) + Math.pow(y + 4 - (partner.y + 10), 2) < distance * distance)
 			{
-				if (count % 2 == 1) count++;
-				count -= 2;
+				count -= 3;
 				if (count < 0) count = 0;
 				updateLight();
 				
@@ -48,13 +48,13 @@ class PlayerFairy extends Fairy
 				if (heartcount == heartspeed)
 				{
 					heartcount = 0;
-					heartspeed = 60 + Util.randInt(180);
+					heartspeed = 40 + Util.randInt(120);
 					heart();
 				}
 			}
 			else
 			{
-				if (count < fadetime) count++;
+				if (count < holdtime + fadetime) count++;
 				updateLight();
 				heartcount = heartspeed - 1;
 			}
@@ -63,7 +63,7 @@ class PlayerFairy extends Fairy
 	
 	private function updateLight():Void
 	{
-		light.scale = (fadetime - count) / fadetime * Fairy.maxscale;
+		light.scale = Math.min((fadetime - count + holdtime) / fadetime, 1) * Fairy.maxscale;
 	}
 	
 	private function heart():Void

@@ -19,6 +19,8 @@ class GameScene extends Scene
 	public static var lighting:Lighting;
 	public static var human:PlayerHuman;
 	public static var fairy:PlayerFairy;
+	public static var fadeoverlay:FadeOverlay;
+	public var levelindex:Int;
 	
 	public inline static var prefwidth:Int = 192;
 	public inline static var prefheight:Int = 144;
@@ -26,6 +28,7 @@ class GameScene extends Scene
 	public function new()
 	{
 		super();
+		fadeoverlay = new FadeOverlay();
 	}
 	
 	override public function update():Void
@@ -56,6 +59,8 @@ class GameScene extends Scene
 			camera.x = Std.int((fairy.x + human.x) / 2 - prefwidth / 2);
 			camera.y = Std.int((fairy.y + human.y) / 2 - prefheight / 2);
 		}
+		
+		if (Input.pressed(Key.R)) fadeoverlay.fadeout(-1);
 	}
 	
 	private function setCamera(x:Float, y:Float)
@@ -64,8 +69,16 @@ class GameScene extends Scene
 		camera.y = Std.int(y);
 	}
 	
-	private function changeLevel(levelindex:Int)
+	// special levelindex codes
+	// -1 : reload the same level
+	// -2 : load the next sequential level
+	// >=0 : Load the specified level
+	public function changeLevel(levelindex:Int)
 	{
+		if (levelindex == -1) levelindex = this.levelindex;
+		else if (levelindex == -2) levelindex = this.levelindex + 1;
+		this.levelindex = levelindex;
+		
 		removeAll();
 		fairy = null;
 		human = null;
@@ -77,6 +90,9 @@ class GameScene extends Scene
 		add(lighting = new Lighting());
 		
 		Level.loadLevel(levelindex);
+		
+		add(fadeoverlay);
+		fadeoverlay.fadein();
 	}
 	
 }
