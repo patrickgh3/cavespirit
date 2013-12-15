@@ -1,5 +1,6 @@
 package com.patrickgh3.cavespirit.entities;
 
+import com.haxepunk.HXP;
 import com.haxepunk.utils.Input;
 import com.haxepunk.utils.Key;
 import com.patrickgh3.cavespirit.scenes.GameScene;
@@ -10,6 +11,7 @@ import com.patrickgh3.cavespirit.scenes.GameScene;
 class PlayerHuman extends Human
 {
 	public var locked:Bool = false;
+	private var jumpdisabled:Bool = false;
 	
 	public function new(x:Int, y:Int) 
 	{
@@ -29,6 +31,7 @@ class PlayerHuman extends Human
 		var right:Bool = Input.check(Key.D);
 		var left:Bool = Input.check(Key.A);
 		var jump:Bool = Input.pressed(Key.W) || Input.pressed(Key.SPACE);
+		if (jumpdisabled) jump = false;
 		
 		if (right) super.walkRight();
 		else if (left) super.walkLeft();
@@ -50,6 +53,15 @@ class PlayerHuman extends Human
 		if (collide("leveltrigger", x, y) != null)
 		{
 			GameScene.fadeoverlay.fadeout(-2);
+		}
+		
+		if (GameScene.levelindex == 7 && x > 32) jumpdisabled = true;
+		
+		if (GameScene.levelindex == 7 && x >= 40 && GameScene.fadeoverlay.state == FadeOverlay.state_idle)
+		{
+			HXP.scene.remove(this);
+			HXP.scene.add(new DyingHuman(Std.int(x) - 6, Std.int(y) - 4));
+			GameScene.fairy.partner = null;
 		}
 	}
 	

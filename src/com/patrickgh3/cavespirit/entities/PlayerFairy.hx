@@ -12,7 +12,7 @@ import com.patrickgh3.cavespirit.Util;
  */
 class PlayerFairy extends Fairy
 {
-	private var partner:PlayerHuman;
+	public var partner:PlayerHuman;
 	private var count:Int = 0;
 	private var fadetime:Int = 360;
 	private var holdtime:Int = 60;
@@ -74,6 +74,13 @@ class PlayerFairy extends Fairy
 			}
 		}
 		
+		if (partner == null && count < holdtime + fadetime)
+		{
+			count++;
+			updateLight();
+			heartcount = 0;
+		}
+		
 		if (collide("leveltrigger", x, y) != null)
 		{
 			GameScene.fadeoverlay.fadeout(-2);
@@ -83,6 +90,12 @@ class PlayerFairy extends Fairy
 		{
 			cast(HXP.scene, GameScene).startMusic();
 			GameScene.musicstarted = true;
+		}
+		
+		if (GameScene.levelindex == 8 && x >= 50 && GameScene.fadeoverlay.state == FadeOverlay.state_idle)
+		{
+			HXP.scene.remove(this);
+			HXP.scene.add(new DyingFairy(Std.int(x) - 3, Std.int(y) - 3));
 		}
 	}
 	

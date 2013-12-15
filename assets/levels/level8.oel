@@ -180,7 +180,6 @@
     <tile x="6" y="11" tx="0" ty="0" />
     <tile x="6" y="12" tx="0" ty="0" />
     <tile x="6" y="13" tx="0" ty="0" />
-    <tile x="6" y="14" tx="0" ty="0" />
     <tile x="6" y="19" tx="0" ty="0" />
     <tile x="6" y="20" tx="0" ty="0" />
     <tile x="6" y="21" tx="0" ty="0" />
@@ -208,7 +207,6 @@
     <tile x="7" y="11" tx="0" ty="0" />
     <tile x="7" y="12" tx="0" ty="0" />
     <tile x="7" y="13" tx="0" ty="0" />
-    <tile x="7" y="14" tx="0" ty="0" />
     <tile x="7" y="19" tx="0" ty="0" />
     <tile x="7" y="20" tx="0" ty="0" />
     <tile x="7" y="21" tx="0" ty="0" />
@@ -236,11 +234,6 @@
     <tile x="8" y="11" tx="0" ty="0" />
     <tile x="8" y="12" tx="0" ty="0" />
     <tile x="8" y="13" tx="0" ty="0" />
-    <tile x="8" y="14" tx="0" ty="0" />
-    <tile x="8" y="15" tx="0" ty="0" />
-    <tile x="8" y="16" tx="0" ty="0" />
-    <tile x="8" y="17" tx="0" ty="0" />
-    <tile x="8" y="18" tx="0" ty="0" />
     <tile x="8" y="19" tx="0" ty="0" />
     <tile x="8" y="20" tx="0" ty="0" />
     <tile x="8" y="21" tx="0" ty="0" />
@@ -268,11 +261,6 @@
     <tile x="9" y="11" tx="0" ty="0" />
     <tile x="9" y="12" tx="0" ty="0" />
     <tile x="9" y="13" tx="0" ty="0" />
-    <tile x="9" y="14" tx="0" ty="0" />
-    <tile x="9" y="15" tx="0" ty="0" />
-    <tile x="9" y="16" tx="0" ty="0" />
-    <tile x="9" y="17" tx="0" ty="0" />
-    <tile x="9" y="18" tx="0" ty="0" />
     <tile x="9" y="19" tx="0" ty="0" />
     <tile x="9" y="20" tx="0" ty="0" />
     <tile x="9" y="21" tx="0" ty="0" />
@@ -300,10 +288,6 @@
     <tile x="10" y="11" tx="0" ty="0" />
     <tile x="10" y="12" tx="0" ty="0" />
     <tile x="10" y="13" tx="0" ty="0" />
-    <tile x="10" y="14" tx="0" ty="0" />
-    <tile x="10" y="15" tx="0" ty="0" />
-    <tile x="10" y="16" tx="0" ty="0" />
-    <tile x="10" y="17" tx="0" ty="0" />
     <tile x="10" y="18" tx="0" ty="0" />
     <tile x="10" y="19" tx="0" ty="0" />
     <tile x="10" y="20" tx="0" ty="0" />
@@ -2016,9 +2000,8 @@
     <tile x="63" y="31" tx="0" ty="0" />
   </tiles>
   <entities>
-    <Torch id="0" x="16" y="128" scale="1" />
-    <PlayerFairy id="1" x="40" y="120" />
-    <PlayerHuman id="2" x="32" y="128" />
-    <LevelTrigger id="3" x="56" y="128" width="8" height="8" />
+    <Torch id="0" x="8" y="128" scale="1" />
+    <PlayerHuman id="1" x="24" y="128" />
+    <PlayerFairy id="2" x="40" y="120" />
   </entities>
 </level>

@@ -126,6 +126,7 @@
     <tile x="4" y="11" tx="0" ty="0" />
     <tile x="4" y="12" tx="0" ty="0" />
     <tile x="4" y="13" tx="0" ty="0" />
+    <tile x="4" y="14" tx="0" ty="0" />
     <tile x="4" y="19" tx="0" ty="0" />
     <tile x="4" y="20" tx="0" ty="0" />
     <tile x="4" y="21" tx="0" ty="0" />
@@ -153,6 +154,7 @@
     <tile x="5" y="11" tx="0" ty="0" />
     <tile x="5" y="12" tx="0" ty="0" />
     <tile x="5" y="13" tx="0" ty="0" />
+    <tile x="5" y="14" tx="0" ty="0" />
     <tile x="5" y="19" tx="0" ty="0" />
     <tile x="5" y="20" tx="0" ty="0" />
     <tile x="5" y="21" tx="0" ty="0" />
@@ -2017,8 +2019,7 @@
   </tiles>
   <entities>
     <Torch id="0" x="16" y="128" scale="1" />
-    <PlayerFairy id="1" x="40" y="120" />
-    <PlayerHuman id="2" x="32" y="128" />
-    <LevelTrigger id="3" x="56" y="128" width="8" height="8" />
+    <PlayerHuman id="1" x="16" y="128" />
+    <PlayerFairy id="2" x="32" y="128" />
   </entities>
 </level>

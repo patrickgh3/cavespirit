@@ -65,6 +65,9 @@ class GameScene extends Scene
 		else if (Input.pressed(Key.DIGIT_3)) changeLevel(3);
 		else if (Input.pressed(Key.DIGIT_4)) changeLevel(4);
 		else if (Input.pressed(Key.DIGIT_5)) changeLevel(5);
+		else if (Input.pressed(Key.DIGIT_6)) changeLevel(6);
+		else if (Input.pressed(Key.DIGIT_7)) changeLevel(7);
+		else if (Input.pressed(Key.DIGIT_8)) changeLevel(8);
 		
 		if (Input.pressed(Key.M))
 		{
