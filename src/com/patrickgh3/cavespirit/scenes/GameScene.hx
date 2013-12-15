@@ -27,6 +27,8 @@ class GameScene extends Scene
 	
 	public inline static var prefwidth:Int = 192;
 	public inline static var prefheight:Int = 144;
+	
+	public static var tickcount:Int = 0;
 
 	public function new()
 	{
@@ -39,13 +41,19 @@ class GameScene extends Scene
 	{
 		super.update();
 		
+		tickcount++;
+		if (tickcount == 5) changeLevel(-3);
+		
 		if (Input.pressed(Key.F)) changeLevel(0);
 		else if (Input.pressed(Key.G)) changeLevel(1);
 		else if (Input.pressed(Key.DIGIT_2)) changeLevel(2);
 		else if (Input.pressed(Key.DIGIT_3)) changeLevel(3);
 		
 		// camera (todo: smooth?)
-		if (fairy == null && human == null) return;
+		if (fairy == null && human == null)
+		{
+			return;
+		}
 		// only human
 		if (fairy == null)
 		{
@@ -86,6 +94,7 @@ class GameScene extends Scene
 	// special levelindex codes
 	// -1 : reload the same level
 	// -2 : load the next sequential level
+	// -3 : load the title level
 	// >=0 : Load the specified level
 	public function changeLevel(levelindex:Int)
 	{

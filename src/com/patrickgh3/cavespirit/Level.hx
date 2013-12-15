@@ -1,5 +1,6 @@
 package com.patrickgh3.cavespirit;
 
+import com.haxepunk.graphics.Text;
 import com.patrickgh3.cavespirit.scenes.GameScene;
 import com.haxepunk.Entity;
 import com.haxepunk.Graphic;
@@ -35,6 +36,7 @@ class Level
 		var x:Int;
 		var y:Int;
 		var path:String = "lvl/level" + Std.string(levelindex) + ".oel";
+		if (levelindex == -3) path = "lvl/leveltitle.oel";
 		var xml:Xml = Xml.parse(Assets.getText(path)).firstElement();
 		
 		levelwidth = cast(Std.parseInt(xml.get("width")) / tilewidth, Int);
@@ -57,6 +59,26 @@ class Level
 			x++;
 		}
 		
+		if (levelindex == -3)
+		{
+			var t:Text = new Text("Spirit Cave");
+			t.size = 16;
+			t.color = 0x355473;
+			var e:Entity = new Entity(48, 40, t);
+			HXP.scene.add(e);
+			
+			var u:Text = new Text("Press M to mute");
+			u.size = 8;
+			u.color = 0x23384D;
+			HXP.scene.add(new Entity(64 - 4, 112 - 8, u));
+			
+			y = 96 - 16;
+			x = 56;
+			HXP.scene.add(new PlayButton(x, y, true));
+			HXP.scene.add(new PlayButton(x + 48, y, false));
+
+		}
+		
 		// load entities
 		for (layer in xml.elementsNamed("entities"))
 		{
@@ -64,7 +86,9 @@ class Level
 			{
 				x = Std.parseInt(ent.get("x"));
 				y = Std.parseInt(ent.get("y"));
-				HXP.scene.add(new Torch(x, y));
+				var scale:Float = Std.parseFloat(ent.get("scale"));
+				if (levelindex == -3 && y > 72) x += 4;
+				HXP.scene.add(new Torch(x, y, scale));
 			}
 			for (ent in layer.elementsNamed("NPCHuman"))
 			{
