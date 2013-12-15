@@ -72,4 +72,18 @@ class Util
 		return Math.floor(Math.random() * n);
 	}
 	
+	public static function rectCollide(x1:Float, y1:Float, w1:Float, h1:Float,
+									   x2:Float, y2:Float, w2:Float, h2:Float):Bool
+	{
+		return x1 < x2 + w2
+			&& x1 + w1 > x2
+			&& y1 < y2 + h2
+			&& y1 + h1 > y2;
+	}
+	
+	public static function entityCollide(e1:Entity, e2:Entity):Bool
+	{
+		return rectCollide(e1.x, e1.y, e1.width, e1.height, e2.x, e2.y, e2.width, e2.height);
+	}
+	
 }

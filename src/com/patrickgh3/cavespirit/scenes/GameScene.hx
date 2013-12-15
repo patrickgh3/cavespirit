@@ -35,6 +35,7 @@ class GameScene extends Scene
 		if (Input.pressed(Key.T)) changeLevel(-1);
 		else if (Input.pressed(Key.F)) changeLevel(0);
 		else if (Input.pressed(Key.G)) changeLevel(1);
+		else if (Input.pressed(Key.DIGIT_2)) changeLevel(2);
 		
 		// camera (todo: smooth?)
 		if (fairy == null && human == null) return;

@@ -45,7 +45,7 @@ class Human extends Entity
 		if (onGround && velocity.x == 0) sprite.play("idle");
 		else if (onGround && velocity.x != 0) sprite.play("walk");
 		else if (!onGround && velocity.y < 0) sprite.play("jump");
-		else if (!onGround && velocity.y > 0) sprite.play("fall");
+		else if (!onGround && velocity.y > 0.25) sprite.play("fall");
 	}
 	
 	private function move():Void

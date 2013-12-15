@@ -2,6 +2,8 @@ package com.patrickgh3.cavespirit.entities;
 
 import com.haxepunk.Entity;
 import com.haxepunk.graphics.Text;
+import com.haxepunk.HXP;
+import com.patrickgh3.cavespirit.scenes.GameScene;
 import com.patrickgh3.cavespirit.Util;
 
 /**
@@ -12,11 +14,13 @@ class NPCHuman extends Human
 	private var behavior:Int;
 	private var message:String;
 	private var text:Entity;
+	private var texthitbox:Entity;
+	private var messagecount:Int = -1;
 	
 	public var hadcollision:Bool;
 	
 	private var count:Int = 0;
-	private var countgoal:Int = 1;
+	private var countgoal:Int = 2;
 	private var state:Int = state_wait;
 	private inline static var state_wait:Int = 0;
 	private inline static var state_walk:Int = 1;
@@ -29,6 +33,16 @@ class NPCHuman extends Human
 		super(x, y);
 		this.behavior = behavior;
 		this.message = message;
+		if (message != null)
+		{
+			var t:Text = new Text(message, -32, -5);
+			t.size = 8;
+			text = new Entity(0, 0, t);
+			text.layer = -2;
+			texthitbox = new Entity();
+			texthitbox.width = 64;
+			texthitbox.height = 32;
+		}
 	}
 	
 	override public function update():Void
@@ -48,8 +62,8 @@ class NPCHuman extends Human
 				walkStop();
 			}
 			count = 0;
-			if (state == state_wait) countgoal = 90 + Util.randInt(120);
-			else if (state == state_walk) countgoal = 40 + Util.randInt(60);
+			if (state == state_wait) countgoal = 120 + Util.randInt(120);
+			else if (state == state_walk) countgoal = 30 + Util.randInt(30);
 		}
 		
 		hadcollision = false;
@@ -58,6 +72,26 @@ class NPCHuman extends Human
 		{
 			if (velocity.x > 0) walkLeft();
 			else walkRight();
+		}
+		
+		texthitbox.x = x - 64;
+		texthitbox.y = y - 32;
+		text.x = x;
+		text.y = y;
+		
+		if (messagecount >= 0) messagecount++;
+		if (messagecount == 60 * 5)
+		{
+			messagecount = -2;
+			HXP.scene.remove(text);
+		}
+		
+		if (texthitbox != null && messagecount == -1
+			&& (Util.entityCollide(texthitbox, GameScene.human) || Util.entityCollide(texthitbox, GameScene.fairy)))
+		{
+			messagecount = 0;
+			HXP.scene.add(text);
+			trace("a");
 		}
 		
 	}

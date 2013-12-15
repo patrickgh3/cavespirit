@@ -29,7 +29,7 @@ class Fairy extends Entity
 		graphic = sprite = new Spritemap("gfx/fairy.png", 16, 16);
 		sprite.add("fly", [0, 1, 2, 3], 6);
 		light = new Light(0, 0, 1, 1);
-		//GameScene.lighting.add(light);
+		GameScene.lighting.add(light);
 		layer = -3;
 		width = 8;
 		height = 8;
