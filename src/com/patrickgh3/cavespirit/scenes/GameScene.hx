@@ -10,6 +10,7 @@ import com.haxepunk.utils.Input;
 import com.haxepunk.utils.Key;
 import com.patrickgh3.cavespirit.entities.*;
 import com.patrickgh3.cavespirit.Level;
+import com.patrickgh3.cavespirit.Util;
 import flash.display.BlendMode;
 
 /**
@@ -29,17 +30,29 @@ class GameScene extends Scene
 	public inline static var prefheight:Int = 144;
 	
 	public static var tickcount:Int = 0;
+	private var sfxDrip:Sfx;
+	private var soundcount:Int = 0;
+	private var soundcountgoal:Int = 1;
 
 	public function new()
 	{
 		super();
 		fadeoverlay = new FadeOverlay();
 		sfxMusic = new Sfx("snd/music.wav");
+		sfxDrip = new Sfx("snd/drip.wav");
 	}
 	
 	override public function update():Void
 	{
 		super.update();
+		
+		soundcount++;
+		if (soundcount == soundcountgoal)
+		{
+			soundcount = 0;
+			soundcountgoal = 120 + Util.randInt(240);
+			sfxDrip.play(0.05);
+		}
 		
 		tickcount++;
 		if (tickcount == 5) changeLevel(-3);

@@ -1996,6 +1996,6 @@
     <LevelTrigger id="12" x="656" y="128" width="8" height="32" />
     <Torch id="13" x="648" y="136" scale="1" />
     <DeathTrigger id="14" x="136" y="200" width="24" height="8" />
-    <NPCHuman id="11" x="560" y="152" behavior="0" message="none" sprite="gfx/human_green.png" />
+    <NPCHuman id="11" x="560" y="152" behavior="0" message="none" sprite="gfx/human_blue.png" />
   </entities>
 </level>
