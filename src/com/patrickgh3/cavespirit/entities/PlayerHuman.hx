@@ -9,6 +9,8 @@ import com.patrickgh3.cavespirit.scenes.GameScene;
  */
 class PlayerHuman extends Human
 {
+	public var locked:Bool = false;
+	
 	public function new(x:Int, y:Int) 
 	{
 		super(x, y, "gfx/human.png");
@@ -17,6 +19,13 @@ class PlayerHuman extends Human
 	
 	override public function update():Void
 	{
+		if (locked)
+		{
+			sprite.play("idle");
+			velocity.x = velocity.y = 0;
+			return;
+		}
+		
 		var right:Bool = Input.check(Key.D);
 		var left:Bool = Input.check(Key.A);
 		var jump:Bool = Input.pressed(Key.W) || Input.pressed(Key.SPACE);

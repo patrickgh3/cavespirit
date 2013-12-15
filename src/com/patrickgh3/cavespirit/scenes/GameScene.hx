@@ -64,6 +64,7 @@ class GameScene extends Scene
 		else if (Input.pressed(Key.DIGIT_2)) changeLevel(2);
 		else if (Input.pressed(Key.DIGIT_3)) changeLevel(3);
 		else if (Input.pressed(Key.DIGIT_4)) changeLevel(4);
+		else if (Input.pressed(Key.DIGIT_5)) changeLevel(5);
 		
 		if (Input.pressed(Key.M))
 		{
@@ -81,10 +82,10 @@ class GameScene extends Scene
 		// camera (todo: smooth?)
 		if (fairy == null && human == null)
 		{
-			return;
+			//return;
 		}
 		// only human
-		if (fairy == null)
+		else if (fairy == null)
 		{
 			setCamera(human.x - prefwidth / 2, human.y - prefheight / 2);
 		}
@@ -106,7 +107,31 @@ class GameScene extends Scene
 		camera.y = Math.max(0, camera.y);
 		camera.y = Math.min(Level.levelheight * Level.tileheight - prefheight, camera.y);
 		
-		if (Input.pressed(Key.R)) fadeoverlay.fadeout(-1);
+		if (Input.pressed(Key.R)) fadeoverlay.fadeout( -1);
+		
+		if (human != null && levelindex == 2 && !musicstarted && human.x > 160)
+		{
+			human.locked = true;
+		}
+		
+		if (fairy != null && levelindex == 2 && !musicstarted && fairy.x > 160)
+		{
+			fairy.locked = true;
+			fairy.stopTravelling();
+		}
+		
+		if (human != null && fairy != null && levelindex == 2 && fairy.x > 160 && human.x > 160 && !musicstarted)
+		{
+			human.locked = true;
+			fairy.locked = true;
+			fairy.flyToPoint(Std.int(human.x) + 8, Std.int(human.y) - 2);
+		}
+		
+		if (human != null && fairy != null && human.locked && fairy.isrecharged())
+		{
+			human.locked = false;
+			fairy.locked = false;
+		}
 	}
 	
 	private function setCamera(x:Float, y:Float)

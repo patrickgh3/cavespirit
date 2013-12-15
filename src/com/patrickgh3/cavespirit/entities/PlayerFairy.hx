@@ -21,6 +21,7 @@ class PlayerFairy extends Fairy
 	private var heartspeed:Int = 1;
 	private var sfxHeart1:Sfx;
 	private var sfxHeart2:Sfx;
+	public var locked:Bool = false;
 	
 	public function new(x:Int, y:Int) 
 	{
@@ -42,7 +43,7 @@ class PlayerFairy extends Fairy
 	
 	override public function update():Void
 	{
-		if (Input.mousePressed)
+		if (Input.mousePressed && !locked)
 		{
 			super.flyToPoint(Std.int(HXP.camera.x) + Input.mouseX, Std.int(HXP.camera.y) + Input.mouseY);
 		}
@@ -102,6 +103,17 @@ class PlayerFairy extends Fairy
 			HXP.scene.add(new HeartParticle(partner.x + 4, partner.y + 10, false));
 			sfxHeart2.play(0.25);
 		}
+	}
+	
+	public function isrecharged():Bool
+	{
+		return count <= 4;
+	}
+	
+	public function stopTravelling():Void
+	{
+		travelling = false;
+		movingextra = false;
 	}
 	
 }

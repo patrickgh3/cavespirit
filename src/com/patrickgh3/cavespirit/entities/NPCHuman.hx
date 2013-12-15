@@ -20,7 +20,7 @@ class NPCHuman extends Human
 	public var hadcollision:Bool;
 	
 	private var count:Int = 0;
-	private var countgoal:Int = 2;
+	private var countgoal:Int = 3;
 	private var state:Int = state_wait;
 	private inline static var state_wait:Int = 0;
 	private inline static var state_walk:Int = 1;
@@ -35,7 +35,7 @@ class NPCHuman extends Human
 		this.message = message;
 		if (message != null)
 		{
-			var t:Text = new Text(message, -32, -5);
+			var t:Text = new Text(message, -48, -8);
 			t.size = 8;
 			text = new Entity(0, 0, t);
 			text.layer = -4;

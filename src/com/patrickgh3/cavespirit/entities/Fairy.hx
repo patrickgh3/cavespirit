@@ -25,7 +25,7 @@ class Fairy extends Entity
 	private var lastframe:Int;
 	private var sfxFlap:Sfx;
 	
-	private static inline var maxscale:Float = 1;
+	private static inline var maxscale:Float = 1.2;
 	
 	public function new(x:Int, y:Int, imagesrc:String) 
 	{
@@ -115,7 +115,7 @@ class Fairy extends Entity
 		if (onCamera) sfxFlap.play(0.25);
 	}
 	
-	private function flyToPoint(x:Int, y:Int):Void
+	public function flyToPoint(x:Int, y:Int):Void
 	{
 		velocity.x = velocity.y = 0;
 		target.x = x - 6;

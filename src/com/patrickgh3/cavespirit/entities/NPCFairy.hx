@@ -32,7 +32,7 @@ class NPCFairy extends Fairy
 		this.message = message;
 		if (message != null)
 		{
-			var t:Text = new Text(message, -48, -5);
+			var t:Text = new Text(message, -48, -8);
 			t.size = 8;
 			text = new Entity(0, 0, t);
 			text.layer = -4;
@@ -51,9 +51,9 @@ class NPCFairy extends Fairy
 			count++;
 			if (count == countgoal)
 			{
-				flyToPoint(Std.int(center.x) + Util.randInt(16) - 8, Std.int(center.y) + Util.randInt(16) - 8);
+				flyToPoint(Std.int(center.x) + Util.randInt(24) - 12, Std.int(center.y) + Util.randInt(24) - 12);
 				count = 0;
-				countgoal = 120 + Util.randInt(120);
+				countgoal = 90 + Util.randInt(60);
 			}
 		}
 		
