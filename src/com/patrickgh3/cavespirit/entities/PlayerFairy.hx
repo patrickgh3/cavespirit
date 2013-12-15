@@ -56,7 +56,7 @@ class PlayerFairy extends Fairy
 				if (heartcount == heartspeed)
 				{
 					heartcount = 0;
-					heartspeed = 40 + Util.randInt(120);
+					heartspeed = 30 + Util.randInt(90);
 					heart();
 				}
 			}

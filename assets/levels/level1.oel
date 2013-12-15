@@ -1,4 +1,4 @@
-<level width="512" height="256">
+<level width="448" height="256">
   <tiles tileset="cave" exportMode="XMLCoords">
     <tile x="0" y="0" tx="0" ty="0" />
     <tile x="0" y="1" tx="0" ty="0" />
@@ -184,10 +184,6 @@
     <tile x="5" y="21" tx="0" ty="0" />
     <tile x="5" y="22" tx="0" ty="0" />
     <tile x="5" y="23" tx="0" ty="0" />
-    <tile x="5" y="24" tx="0" ty="0" />
-    <tile x="5" y="25" tx="0" ty="0" />
-    <tile x="5" y="26" tx="0" ty="0" />
-    <tile x="5" y="27" tx="0" ty="0" />
     <tile x="5" y="28" tx="0" ty="0" />
     <tile x="5" y="29" tx="0" ty="0" />
     <tile x="5" y="30" tx="0" ty="0" />
@@ -216,10 +212,6 @@
     <tile x="6" y="21" tx="0" ty="0" />
     <tile x="6" y="22" tx="0" ty="0" />
     <tile x="6" y="23" tx="0" ty="0" />
-    <tile x="6" y="24" tx="0" ty="0" />
-    <tile x="6" y="25" tx="0" ty="0" />
-    <tile x="6" y="26" tx="0" ty="0" />
-    <tile x="6" y="27" tx="0" ty="0" />
     <tile x="6" y="28" tx="0" ty="0" />
     <tile x="6" y="29" tx="0" ty="0" />
     <tile x="6" y="30" tx="0" ty="0" />
@@ -245,9 +237,7 @@
     <tile x="7" y="18" tx="0" ty="0" />
     <tile x="7" y="19" tx="0" ty="0" />
     <tile x="7" y="20" tx="0" ty="0" />
-    <tile x="7" y="25" tx="0" ty="0" />
-    <tile x="7" y="26" tx="0" ty="0" />
-    <tile x="7" y="27" tx="0" ty="0" />
+    <tile x="7" y="21" tx="0" ty="0" />
     <tile x="7" y="28" tx="0" ty="0" />
     <tile x="7" y="29" tx="0" ty="0" />
     <tile x="7" y="30" tx="0" ty="0" />
@@ -273,9 +263,7 @@
     <tile x="8" y="18" tx="0" ty="0" />
     <tile x="8" y="19" tx="0" ty="0" />
     <tile x="8" y="20" tx="0" ty="0" />
-    <tile x="8" y="25" tx="0" ty="0" />
-    <tile x="8" y="26" tx="0" ty="0" />
-    <tile x="8" y="27" tx="0" ty="0" />
+    <tile x="8" y="21" tx="0" ty="0" />
     <tile x="8" y="28" tx="0" ty="0" />
     <tile x="8" y="29" tx="0" ty="0" />
     <tile x="8" y="30" tx="0" ty="0" />
@@ -299,9 +287,9 @@
     <tile x="9" y="16" tx="0" ty="0" />
     <tile x="9" y="17" tx="0" ty="0" />
     <tile x="9" y="18" tx="0" ty="0" />
-    <tile x="9" y="25" tx="0" ty="0" />
-    <tile x="9" y="26" tx="0" ty="0" />
-    <tile x="9" y="27" tx="0" ty="0" />
+    <tile x="9" y="19" tx="0" ty="0" />
+    <tile x="9" y="20" tx="0" ty="0" />
+    <tile x="9" y="21" tx="0" ty="0" />
     <tile x="9" y="28" tx="0" ty="0" />
     <tile x="9" y="29" tx="0" ty="0" />
     <tile x="9" y="30" tx="0" ty="0" />
@@ -325,9 +313,9 @@
     <tile x="10" y="16" tx="0" ty="0" />
     <tile x="10" y="17" tx="0" ty="0" />
     <tile x="10" y="18" tx="0" ty="0" />
-    <tile x="10" y="25" tx="0" ty="0" />
-    <tile x="10" y="26" tx="0" ty="0" />
-    <tile x="10" y="27" tx="0" ty="0" />
+    <tile x="10" y="19" tx="0" ty="0" />
+    <tile x="10" y="20" tx="0" ty="0" />
+    <tile x="10" y="21" tx="0" ty="0" />
     <tile x="10" y="28" tx="0" ty="0" />
     <tile x="10" y="29" tx="0" ty="0" />
     <tile x="10" y="30" tx="0" ty="0" />
@@ -351,9 +339,9 @@
     <tile x="11" y="16" tx="0" ty="0" />
     <tile x="11" y="17" tx="0" ty="0" />
     <tile x="11" y="18" tx="0" ty="0" />
-    <tile x="11" y="25" tx="0" ty="0" />
-    <tile x="11" y="26" tx="0" ty="0" />
-    <tile x="11" y="27" tx="0" ty="0" />
+    <tile x="11" y="19" tx="0" ty="0" />
+    <tile x="11" y="20" tx="0" ty="0" />
+    <tile x="11" y="21" tx="0" ty="0" />
     <tile x="11" y="28" tx="0" ty="0" />
     <tile x="11" y="29" tx="0" ty="0" />
     <tile x="11" y="30" tx="0" ty="0" />
@@ -377,9 +365,9 @@
     <tile x="12" y="16" tx="0" ty="0" />
     <tile x="12" y="17" tx="0" ty="0" />
     <tile x="12" y="18" tx="0" ty="0" />
-    <tile x="12" y="25" tx="0" ty="0" />
-    <tile x="12" y="26" tx="0" ty="0" />
-    <tile x="12" y="27" tx="0" ty="0" />
+    <tile x="12" y="19" tx="0" ty="0" />
+    <tile x="12" y="20" tx="0" ty="0" />
+    <tile x="12" y="21" tx="0" ty="0" />
     <tile x="12" y="28" tx="0" ty="0" />
     <tile x="12" y="29" tx="0" ty="0" />
     <tile x="12" y="30" tx="0" ty="0" />
@@ -403,9 +391,9 @@
     <tile x="13" y="16" tx="0" ty="0" />
     <tile x="13" y="17" tx="0" ty="0" />
     <tile x="13" y="18" tx="0" ty="0" />
-    <tile x="13" y="25" tx="0" ty="0" />
-    <tile x="13" y="26" tx="0" ty="0" />
-    <tile x="13" y="27" tx="0" ty="0" />
+    <tile x="13" y="19" tx="0" ty="0" />
+    <tile x="13" y="20" tx="0" ty="0" />
+    <tile x="13" y="21" tx="0" ty="0" />
     <tile x="13" y="28" tx="0" ty="0" />
     <tile x="13" y="29" tx="0" ty="0" />
     <tile x="13" y="30" tx="0" ty="0" />
@@ -429,9 +417,11 @@
     <tile x="14" y="16" tx="0" ty="0" />
     <tile x="14" y="17" tx="0" ty="0" />
     <tile x="14" y="18" tx="0" ty="0" />
-    <tile x="14" y="25" tx="0" ty="0" />
-    <tile x="14" y="26" tx="0" ty="0" />
-    <tile x="14" y="27" tx="0" ty="0" />
+    <tile x="14" y="19" tx="0" ty="0" />
+    <tile x="14" y="20" tx="0" ty="0" />
+    <tile x="14" y="21" tx="0" ty="0" />
+    <tile x="14" y="22" tx="0" ty="0" />
+    <tile x="14" y="23" tx="0" ty="0" />
     <tile x="14" y="28" tx="0" ty="0" />
     <tile x="14" y="29" tx="0" ty="0" />
     <tile x="14" y="30" tx="0" ty="0" />
@@ -457,9 +447,9 @@
     <tile x="15" y="18" tx="0" ty="0" />
     <tile x="15" y="19" tx="0" ty="0" />
     <tile x="15" y="20" tx="0" ty="0" />
-    <tile x="15" y="25" tx="0" ty="0" />
-    <tile x="15" y="26" tx="0" ty="0" />
-    <tile x="15" y="27" tx="0" ty="0" />
+    <tile x="15" y="21" tx="0" ty="0" />
+    <tile x="15" y="22" tx="0" ty="0" />
+    <tile x="15" y="23" tx="0" ty="0" />
     <tile x="15" y="28" tx="0" ty="0" />
     <tile x="15" y="29" tx="0" ty="0" />
     <tile x="15" y="30" tx="0" ty="0" />
@@ -485,10 +475,10 @@
     <tile x="16" y="18" tx="0" ty="0" />
     <tile x="16" y="19" tx="0" ty="0" />
     <tile x="16" y="20" tx="0" ty="0" />
-    <tile x="16" y="25" tx="0" ty="0" />
-    <tile x="16" y="26" tx="0" ty="0" />
-    <tile x="16" y="27" tx="0" ty="0" />
-    <tile x="16" y="28" tx="0" ty="0" />
+    <tile x="16" y="21" tx="0" ty="0" />
+    <tile x="16" y="22" tx="0" ty="0" />
+    <tile x="16" y="23" tx="0" ty="0" />
+    <tile x="16" y="24" tx="0" ty="0" />
     <tile x="16" y="29" tx="0" ty="0" />
     <tile x="16" y="30" tx="0" ty="0" />
     <tile x="16" y="31" tx="0" ty="0" />
@@ -514,9 +504,9 @@
     <tile x="17" y="19" tx="0" ty="0" />
     <tile x="17" y="20" tx="0" ty="0" />
     <tile x="17" y="21" tx="0" ty="0" />
-    <tile x="17" y="26" tx="0" ty="0" />
-    <tile x="17" y="27" tx="0" ty="0" />
-    <tile x="17" y="28" tx="0" ty="0" />
+    <tile x="17" y="22" tx="0" ty="0" />
+    <tile x="17" y="23" tx="0" ty="0" />
+    <tile x="17" y="24" tx="0" ty="0" />
     <tile x="17" y="29" tx="0" ty="0" />
     <tile x="17" y="30" tx="0" ty="0" />
     <tile x="17" y="31" tx="0" ty="0" />
@@ -542,9 +532,8 @@
     <tile x="18" y="19" tx="0" ty="0" />
     <tile x="18" y="20" tx="0" ty="0" />
     <tile x="18" y="21" tx="0" ty="0" />
-    <tile x="18" y="26" tx="0" ty="0" />
-    <tile x="18" y="27" tx="0" ty="0" />
-    <tile x="18" y="28" tx="0" ty="0" />
+    <tile x="18" y="22" tx="0" ty="0" />
+    <tile x="18" y="23" tx="0" ty="0" />
     <tile x="18" y="29" tx="0" ty="0" />
     <tile x="18" y="30" tx="0" ty="0" />
     <tile x="18" y="31" tx="0" ty="0" />
@@ -569,9 +558,9 @@
     <tile x="19" y="18" tx="0" ty="0" />
     <tile x="19" y="19" tx="0" ty="0" />
     <tile x="19" y="20" tx="0" ty="0" />
-    <tile x="19" y="26" tx="0" ty="0" />
-    <tile x="19" y="27" tx="0" ty="0" />
-    <tile x="19" y="28" tx="0" ty="0" />
+    <tile x="19" y="21" tx="0" ty="0" />
+    <tile x="19" y="22" tx="0" ty="0" />
+    <tile x="19" y="23" tx="0" ty="0" />
     <tile x="19" y="29" tx="0" ty="0" />
     <tile x="19" y="30" tx="0" ty="0" />
     <tile x="19" y="31" tx="0" ty="0" />
@@ -596,9 +585,8 @@
     <tile x="20" y="18" tx="0" ty="0" />
     <tile x="20" y="19" tx="0" ty="0" />
     <tile x="20" y="20" tx="0" ty="0" />
-    <tile x="20" y="26" tx="0" ty="0" />
-    <tile x="20" y="27" tx="0" ty="0" />
-    <tile x="20" y="28" tx="0" ty="0" />
+    <tile x="20" y="21" tx="0" ty="0" />
+    <tile x="20" y="22" tx="0" ty="0" />
     <tile x="20" y="29" tx="0" ty="0" />
     <tile x="20" y="30" tx="0" ty="0" />
     <tile x="20" y="31" tx="0" ty="0" />
@@ -622,9 +610,9 @@
     <tile x="21" y="17" tx="0" ty="0" />
     <tile x="21" y="18" tx="0" ty="0" />
     <tile x="21" y="19" tx="0" ty="0" />
-    <tile x="21" y="26" tx="0" ty="0" />
-    <tile x="21" y="27" tx="0" ty="0" />
-    <tile x="21" y="28" tx="0" ty="0" />
+    <tile x="21" y="20" tx="0" ty="0" />
+    <tile x="21" y="21" tx="0" ty="0" />
+    <tile x="21" y="22" tx="0" ty="0" />
     <tile x="21" y="29" tx="0" ty="0" />
     <tile x="21" y="30" tx="0" ty="0" />
     <tile x="21" y="31" tx="0" ty="0" />
@@ -648,7 +636,9 @@
     <tile x="22" y="17" tx="0" ty="0" />
     <tile x="22" y="18" tx="0" ty="0" />
     <tile x="22" y="19" tx="0" ty="0" />
-    <tile x="22" y="26" tx="0" ty="0" />
+    <tile x="22" y="20" tx="0" ty="0" />
+    <tile x="22" y="21" tx="0" ty="0" />
+    <tile x="22" y="22" tx="0" ty="0" />
     <tile x="22" y="27" tx="0" ty="0" />
     <tile x="22" y="28" tx="0" ty="0" />
     <tile x="22" y="29" tx="0" ty="0" />
@@ -674,9 +664,8 @@
     <tile x="23" y="17" tx="0" ty="0" />
     <tile x="23" y="18" tx="0" ty="0" />
     <tile x="23" y="19" tx="0" ty="0" />
-    <tile x="23" y="24" tx="0" ty="0" />
-    <tile x="23" y="25" tx="0" ty="0" />
-    <tile x="23" y="26" tx="0" ty="0" />
+    <tile x="23" y="20" tx="0" ty="0" />
+    <tile x="23" y="21" tx="0" ty="0" />
     <tile x="23" y="27" tx="0" ty="0" />
     <tile x="23" y="28" tx="0" ty="0" />
     <tile x="23" y="29" tx="0" ty="0" />
@@ -701,9 +690,9 @@
     <tile x="24" y="16" tx="0" ty="0" />
     <tile x="24" y="17" tx="0" ty="0" />
     <tile x="24" y="18" tx="0" ty="0" />
-    <tile x="24" y="24" tx="0" ty="0" />
-    <tile x="24" y="25" tx="0" ty="0" />
-    <tile x="24" y="26" tx="0" ty="0" />
+    <tile x="24" y="19" tx="0" ty="0" />
+    <tile x="24" y="20" tx="0" ty="0" />
+    <tile x="24" y="21" tx="0" ty="0" />
     <tile x="24" y="27" tx="0" ty="0" />
     <tile x="24" y="28" tx="0" ty="0" />
     <tile x="24" y="29" tx="0" ty="0" />
@@ -728,8 +717,8 @@
     <tile x="25" y="16" tx="0" ty="0" />
     <tile x="25" y="17" tx="0" ty="0" />
     <tile x="25" y="18" tx="0" ty="0" />
-    <tile x="25" y="24" tx="0" ty="0" />
-    <tile x="25" y="25" tx="0" ty="0" />
+    <tile x="25" y="19" tx="0" ty="0" />
+    <tile x="25" y="20" tx="0" ty="0" />
     <tile x="25" y="26" tx="0" ty="0" />
     <tile x="25" y="27" tx="0" ty="0" />
     <tile x="25" y="28" tx="0" ty="0" />
@@ -754,9 +743,9 @@
     <tile x="26" y="15" tx="0" ty="0" />
     <tile x="26" y="16" tx="0" ty="0" />
     <tile x="26" y="17" tx="0" ty="0" />
-    <tile x="26" y="23" tx="0" ty="0" />
-    <tile x="26" y="24" tx="0" ty="0" />
-    <tile x="26" y="25" tx="0" ty="0" />
+    <tile x="26" y="18" tx="0" ty="0" />
+    <tile x="26" y="19" tx="0" ty="0" />
+    <tile x="26" y="20" tx="0" ty="0" />
     <tile x="26" y="26" tx="0" ty="0" />
     <tile x="26" y="27" tx="0" ty="0" />
     <tile x="26" y="28" tx="0" ty="0" />
@@ -781,8 +770,8 @@
     <tile x="27" y="15" tx="0" ty="0" />
     <tile x="27" y="16" tx="0" ty="0" />
     <tile x="27" y="17" tx="0" ty="0" />
-    <tile x="27" y="23" tx="0" ty="0" />
-    <tile x="27" y="24" tx="0" ty="0" />
+    <tile x="27" y="18" tx="0" ty="0" />
+    <tile x="27" y="19" tx="0" ty="0" />
     <tile x="27" y="25" tx="0" ty="0" />
     <tile x="27" y="26" tx="0" ty="0" />
     <tile x="27" y="27" tx="0" ty="0" />
@@ -807,9 +796,9 @@
     <tile x="28" y="14" tx="0" ty="0" />
     <tile x="28" y="15" tx="0" ty="0" />
     <tile x="28" y="16" tx="0" ty="0" />
-    <tile x="28" y="22" tx="0" ty="0" />
-    <tile x="28" y="23" tx="0" ty="0" />
-    <tile x="28" y="24" tx="0" ty="0" />
+    <tile x="28" y="17" tx="0" ty="0" />
+    <tile x="28" y="18" tx="0" ty="0" />
+    <tile x="28" y="19" tx="0" ty="0" />
     <tile x="28" y="25" tx="0" ty="0" />
     <tile x="28" y="26" tx="0" ty="0" />
     <tile x="28" y="27" tx="0" ty="0" />
@@ -834,11 +823,8 @@
     <tile x="29" y="14" tx="0" ty="0" />
     <tile x="29" y="15" tx="0" ty="0" />
     <tile x="29" y="16" tx="0" ty="0" />
-    <tile x="29" y="22" tx="0" ty="0" />
-    <tile x="29" y="23" tx="0" ty="0" />
-    <tile x="29" y="24" tx="0" ty="0" />
-    <tile x="29" y="25" tx="0" ty="0" />
-    <tile x="29" y="26" tx="0" ty="0" />
+    <tile x="29" y="17" tx="0" ty="0" />
+    <tile x="29" y="18" tx="0" ty="0" />
     <tile x="29" y="27" tx="0" ty="0" />
     <tile x="29" y="28" tx="0" ty="0" />
     <tile x="29" y="29" tx="0" ty="0" />
@@ -860,10 +846,10 @@
     <tile x="30" y="13" tx="0" ty="0" />
     <tile x="30" y="14" tx="0" ty="0" />
     <tile x="30" y="15" tx="0" ty="0" />
-    <tile x="30" y="24" tx="0" ty="0" />
-    <tile x="30" y="25" tx="0" ty="0" />
-    <tile x="30" y="26" tx="0" ty="0" />
-    <tile x="30" y="27" tx="0" ty="0" />
+    <tile x="30" y="16" tx="0" ty="0" />
+    <tile x="30" y="17" tx="0" ty="0" />
+    <tile x="30" y="18" tx="0" ty="0" />
+    <tile x="30" y="19" tx="0" ty="0" />
     <tile x="30" y="28" tx="0" ty="0" />
     <tile x="30" y="29" tx="0" ty="0" />
     <tile x="30" y="30" tx="0" ty="0" />
@@ -876,18 +862,12 @@
     <tile x="31" y="5" tx="0" ty="0" />
     <tile x="31" y="6" tx="0" ty="0" />
     <tile x="31" y="7" tx="0" ty="0" />
-    <tile x="31" y="8" tx="0" ty="0" />
-    <tile x="31" y="9" tx="0" ty="0" />
-    <tile x="31" y="10" tx="0" ty="0" />
-    <tile x="31" y="11" tx="0" ty="0" />
-    <tile x="31" y="12" tx="0" ty="0" />
     <tile x="31" y="13" tx="0" ty="0" />
     <tile x="31" y="14" tx="0" ty="0" />
     <tile x="31" y="15" tx="0" ty="0" />
     <tile x="31" y="16" tx="0" ty="0" />
-    <tile x="31" y="25" tx="0" ty="0" />
-    <tile x="31" y="26" tx="0" ty="0" />
-    <tile x="31" y="27" tx="0" ty="0" />
+    <tile x="31" y="17" tx="0" ty="0" />
+    <tile x="31" y="18" tx="0" ty="0" />
     <tile x="31" y="28" tx="0" ty="0" />
     <tile x="31" y="29" tx="0" ty="0" />
     <tile x="31" y="30" tx="0" ty="0" />
@@ -897,12 +877,14 @@
     <tile x="32" y="2" tx="0" ty="0" />
     <tile x="32" y="3" tx="0" ty="0" />
     <tile x="32" y="4" tx="0" ty="0" />
-    <tile x="32" y="10" tx="0" ty="0" />
-    <tile x="32" y="11" tx="0" ty="0" />
-    <tile x="32" y="12" tx="0" ty="0" />
+    <tile x="32" y="5" tx="0" ty="0" />
     <tile x="32" y="13" tx="0" ty="0" />
     <tile x="32" y="14" tx="0" ty="0" />
     <tile x="32" y="15" tx="0" ty="0" />
+    <tile x="32" y="16" tx="0" ty="0" />
+    <tile x="32" y="17" tx="0" ty="0" />
+    <tile x="32" y="18" tx="0" ty="0" />
+    <tile x="32" y="24" tx="0" ty="0" />
     <tile x="32" y="25" tx="0" ty="0" />
     <tile x="32" y="26" tx="0" ty="0" />
     <tile x="32" y="27" tx="0" ty="0" />
@@ -913,15 +895,11 @@
     <tile x="33" y="0" tx="0" ty="0" />
     <tile x="33" y="1" tx="0" ty="0" />
     <tile x="33" y="2" tx="0" ty="0" />
-    <tile x="33" y="10" tx="0" ty="0" />
-    <tile x="33" y="11" tx="0" ty="0" />
-    <tile x="33" y="12" tx="0" ty="0" />
-    <tile x="33" y="13" tx="0" ty="0" />
-    <tile x="33" y="14" tx="0" ty="0" />
+    <tile x="33" y="3" tx="0" ty="0" />
+    <tile x="33" y="4" tx="0" ty="0" />
     <tile x="33" y="15" tx="0" ty="0" />
-    <tile x="33" y="21" tx="0" ty="0" />
-    <tile x="33" y="22" tx="0" ty="0" />
-    <tile x="33" y="23" tx="0" ty="0" />
+    <tile x="33" y="16" tx="0" ty="0" />
+    <tile x="33" y="17" tx="0" ty="0" />
     <tile x="33" y="24" tx="0" ty="0" />
     <tile x="33" y="25" tx="0" ty="0" />
     <tile x="33" y="26" tx="0" ty="0" />
@@ -932,11 +910,10 @@
     <tile x="33" y="31" tx="0" ty="0" />
     <tile x="34" y="0" tx="0" ty="0" />
     <tile x="34" y="1" tx="0" ty="0" />
-    <tile x="34" y="12" tx="0" ty="0" />
-    <tile x="34" y="13" tx="0" ty="0" />
-    <tile x="34" y="14" tx="0" ty="0" />
-    <tile x="34" y="21" tx="0" ty="0" />
-    <tile x="34" y="22" tx="0" ty="0" />
+    <tile x="34" y="2" tx="0" ty="0" />
+    <tile x="34" y="3" tx="0" ty="0" />
+    <tile x="34" y="4" tx="0" ty="0" />
+    <tile x="34" y="17" tx="0" ty="0" />
     <tile x="34" y="23" tx="0" ty="0" />
     <tile x="34" y="24" tx="0" ty="0" />
     <tile x="34" y="25" tx="0" ty="0" />
@@ -948,8 +925,11 @@
     <tile x="34" y="31" tx="0" ty="0" />
     <tile x="35" y="0" tx="0" ty="0" />
     <tile x="35" y="1" tx="0" ty="0" />
-    <tile x="35" y="14" tx="0" ty="0" />
-    <tile x="35" y="20" tx="0" ty="0" />
+    <tile x="35" y="2" tx="0" ty="0" />
+    <tile x="35" y="3" tx="0" ty="0" />
+    <tile x="35" y="4" tx="0" ty="0" />
+    <tile x="35" y="5" tx="0" ty="0" />
+    <tile x="35" y="11" tx="0" ty="0" />
     <tile x="35" y="21" tx="0" ty="0" />
     <tile x="35" y="22" tx="0" ty="0" />
     <tile x="35" y="23" tx="0" ty="0" />
@@ -963,10 +943,11 @@
     <tile x="35" y="31" tx="0" ty="0" />
     <tile x="36" y="0" tx="0" ty="0" />
     <tile x="36" y="1" tx="0" ty="0" />
-    <tile x="36" y="8" tx="0" ty="0" />
-    <tile x="36" y="18" tx="0" ty="0" />
-    <tile x="36" y="19" tx="0" ty="0" />
-    <tile x="36" y="20" tx="0" ty="0" />
+    <tile x="36" y="2" tx="0" ty="0" />
+    <tile x="36" y="3" tx="0" ty="0" />
+    <tile x="36" y="4" tx="0" ty="0" />
+    <tile x="36" y="5" tx="0" ty="0" />
+    <tile x="36" y="11" tx="0" ty="0" />
     <tile x="36" y="21" tx="0" ty="0" />
     <tile x="36" y="22" tx="0" ty="0" />
     <tile x="36" y="23" tx="0" ty="0" />
@@ -980,8 +961,13 @@
     <tile x="36" y="31" tx="0" ty="0" />
     <tile x="37" y="0" tx="0" ty="0" />
     <tile x="37" y="1" tx="0" ty="0" />
-    <tile x="37" y="8" tx="0" ty="0" />
-    <tile x="37" y="18" tx="0" ty="0" />
+    <tile x="37" y="2" tx="0" ty="0" />
+    <tile x="37" y="3" tx="0" ty="0" />
+    <tile x="37" y="4" tx="0" ty="0" />
+    <tile x="37" y="10" tx="0" ty="0" />
+    <tile x="37" y="11" tx="0" ty="0" />
+    <tile x="37" y="12" tx="0" ty="0" />
+    <tile x="37" y="13" tx="0" ty="0" />
     <tile x="37" y="19" tx="0" ty="0" />
     <tile x="37" y="20" tx="0" ty="0" />
     <tile x="37" y="21" tx="0" ty="0" />
@@ -997,13 +983,15 @@
     <tile x="37" y="31" tx="0" ty="0" />
     <tile x="38" y="0" tx="0" ty="0" />
     <tile x="38" y="1" tx="0" ty="0" />
-    <tile x="38" y="7" tx="0" ty="0" />
-    <tile x="38" y="8" tx="0" ty="0" />
+    <tile x="38" y="2" tx="0" ty="0" />
+    <tile x="38" y="3" tx="0" ty="0" />
+    <tile x="38" y="4" tx="0" ty="0" />
     <tile x="38" y="9" tx="0" ty="0" />
     <tile x="38" y="10" tx="0" ty="0" />
-    <tile x="38" y="16" tx="0" ty="0" />
-    <tile x="38" y="17" tx="0" ty="0" />
-    <tile x="38" y="18" tx="0" ty="0" />
+    <tile x="38" y="11" tx="0" ty="0" />
+    <tile x="38" y="12" tx="0" ty="0" />
+    <tile x="38" y="13" tx="0" ty="0" />
+    <tile x="38" y="14" tx="0" ty="0" />
     <tile x="38" y="19" tx="0" ty="0" />
     <tile x="38" y="20" tx="0" ty="0" />
     <tile x="38" y="21" tx="0" ty="0" />
@@ -1019,12 +1007,16 @@
     <tile x="38" y="31" tx="0" ty="0" />
     <tile x="39" y="0" tx="0" ty="0" />
     <tile x="39" y="1" tx="0" ty="0" />
-    <tile x="39" y="6" tx="0" ty="0" />
-    <tile x="39" y="7" tx="0" ty="0" />
-    <tile x="39" y="8" tx="0" ty="0" />
+    <tile x="39" y="2" tx="0" ty="0" />
+    <tile x="39" y="3" tx="0" ty="0" />
+    <tile x="39" y="4" tx="0" ty="0" />
     <tile x="39" y="9" tx="0" ty="0" />
     <tile x="39" y="10" tx="0" ty="0" />
     <tile x="39" y="11" tx="0" ty="0" />
+    <tile x="39" y="12" tx="0" ty="0" />
+    <tile x="39" y="13" tx="0" ty="0" />
+    <tile x="39" y="14" tx="0" ty="0" />
+    <tile x="39" y="15" tx="0" ty="0" />
     <tile x="39" y="16" tx="0" ty="0" />
     <tile x="39" y="17" tx="0" ty="0" />
     <tile x="39" y="18" tx="0" ty="0" />
@@ -1043,9 +1035,7 @@
     <tile x="39" y="31" tx="0" ty="0" />
     <tile x="40" y="0" tx="0" ty="0" />
     <tile x="40" y="1" tx="0" ty="0" />
-    <tile x="40" y="6" tx="0" ty="0" />
-    <tile x="40" y="7" tx="0" ty="0" />
-    <tile x="40" y="8" tx="0" ty="0" />
+    <tile x="40" y="2" tx="0" ty="0" />
     <tile x="40" y="9" tx="0" ty="0" />
     <tile x="40" y="10" tx="0" ty="0" />
     <tile x="40" y="11" tx="0" ty="0" />
@@ -1070,9 +1060,7 @@
     <tile x="40" y="30" tx="0" ty="0" />
     <tile x="40" y="31" tx="0" ty="0" />
     <tile x="41" y="0" tx="0" ty="0" />
-    <tile x="41" y="6" tx="0" ty="0" />
-    <tile x="41" y="7" tx="0" ty="0" />
-    <tile x="41" y="8" tx="0" ty="0" />
+    <tile x="41" y="1" tx="0" ty="0" />
     <tile x="41" y="9" tx="0" ty="0" />
     <tile x="41" y="10" tx="0" ty="0" />
     <tile x="41" y="11" tx="0" ty="0" />
@@ -1097,7 +1085,7 @@
     <tile x="41" y="30" tx="0" ty="0" />
     <tile x="41" y="31" tx="0" ty="0" />
     <tile x="42" y="0" tx="0" ty="0" />
-    <tile x="42" y="6" tx="0" ty="0" />
+    <tile x="42" y="1" tx="0" ty="0" />
     <tile x="42" y="7" tx="0" ty="0" />
     <tile x="42" y="8" tx="0" ty="0" />
     <tile x="42" y="9" tx="0" ty="0" />
@@ -1124,9 +1112,6 @@
     <tile x="42" y="30" tx="0" ty="0" />
     <tile x="42" y="31" tx="0" ty="0" />
     <tile x="43" y="0" tx="0" ty="0" />
-    <tile x="43" y="4" tx="0" ty="0" />
-    <tile x="43" y="5" tx="0" ty="0" />
-    <tile x="43" y="6" tx="0" ty="0" />
     <tile x="43" y="7" tx="0" ty="0" />
     <tile x="43" y="8" tx="0" ty="0" />
     <tile x="43" y="9" tx="0" ty="0" />
@@ -1153,7 +1138,6 @@
     <tile x="43" y="30" tx="0" ty="0" />
     <tile x="43" y="31" tx="0" ty="0" />
     <tile x="44" y="0" tx="0" ty="0" />
-    <tile x="44" y="4" tx="0" ty="0" />
     <tile x="44" y="5" tx="0" ty="0" />
     <tile x="44" y="6" tx="0" ty="0" />
     <tile x="44" y="7" tx="0" ty="0" />
@@ -1182,10 +1166,6 @@
     <tile x="44" y="30" tx="0" ty="0" />
     <tile x="44" y="31" tx="0" ty="0" />
     <tile x="45" y="0" tx="0" ty="0" />
-    <tile x="45" y="1" tx="0" ty="0" />
-    <tile x="45" y="2" tx="0" ty="0" />
-    <tile x="45" y="3" tx="0" ty="0" />
-    <tile x="45" y="4" tx="0" ty="0" />
     <tile x="45" y="5" tx="0" ty="0" />
     <tile x="45" y="6" tx="0" ty="0" />
     <tile x="45" y="7" tx="0" ty="0" />
@@ -1214,10 +1194,6 @@
     <tile x="45" y="30" tx="0" ty="0" />
     <tile x="45" y="31" tx="0" ty="0" />
     <tile x="46" y="0" tx="0" ty="0" />
-    <tile x="46" y="1" tx="0" ty="0" />
-    <tile x="46" y="2" tx="0" ty="0" />
-    <tile x="46" y="3" tx="0" ty="0" />
-    <tile x="46" y="4" tx="0" ty="0" />
     <tile x="46" y="5" tx="0" ty="0" />
     <tile x="46" y="6" tx="0" ty="0" />
     <tile x="46" y="7" tx="0" ty="0" />
@@ -1246,10 +1222,6 @@
     <tile x="46" y="30" tx="0" ty="0" />
     <tile x="46" y="31" tx="0" ty="0" />
     <tile x="47" y="0" tx="0" ty="0" />
-    <tile x="47" y="1" tx="0" ty="0" />
-    <tile x="47" y="2" tx="0" ty="0" />
-    <tile x="47" y="3" tx="0" ty="0" />
-    <tile x="47" y="4" tx="0" ty="0" />
     <tile x="47" y="5" tx="0" ty="0" />
     <tile x="47" y="6" tx="0" ty="0" />
     <tile x="47" y="7" tx="0" ty="0" />
@@ -1278,10 +1250,6 @@
     <tile x="47" y="30" tx="0" ty="0" />
     <tile x="47" y="31" tx="0" ty="0" />
     <tile x="48" y="0" tx="0" ty="0" />
-    <tile x="48" y="1" tx="0" ty="0" />
-    <tile x="48" y="2" tx="0" ty="0" />
-    <tile x="48" y="3" tx="0" ty="0" />
-    <tile x="48" y="4" tx="0" ty="0" />
     <tile x="48" y="5" tx="0" ty="0" />
     <tile x="48" y="6" tx="0" ty="0" />
     <tile x="48" y="7" tx="0" ty="0" />
@@ -1310,10 +1278,6 @@
     <tile x="48" y="30" tx="0" ty="0" />
     <tile x="48" y="31" tx="0" ty="0" />
     <tile x="49" y="0" tx="0" ty="0" />
-    <tile x="49" y="1" tx="0" ty="0" />
-    <tile x="49" y="2" tx="0" ty="0" />
-    <tile x="49" y="3" tx="0" ty="0" />
-    <tile x="49" y="4" tx="0" ty="0" />
     <tile x="49" y="5" tx="0" ty="0" />
     <tile x="49" y="6" tx="0" ty="0" />
     <tile x="49" y="7" tx="0" ty="0" />
@@ -1342,10 +1306,6 @@
     <tile x="49" y="30" tx="0" ty="0" />
     <tile x="49" y="31" tx="0" ty="0" />
     <tile x="50" y="0" tx="0" ty="0" />
-    <tile x="50" y="1" tx="0" ty="0" />
-    <tile x="50" y="2" tx="0" ty="0" />
-    <tile x="50" y="3" tx="0" ty="0" />
-    <tile x="50" y="4" tx="0" ty="0" />
     <tile x="50" y="5" tx="0" ty="0" />
     <tile x="50" y="6" tx="0" ty="0" />
     <tile x="50" y="7" tx="0" ty="0" />
@@ -1374,10 +1334,6 @@
     <tile x="50" y="30" tx="0" ty="0" />
     <tile x="50" y="31" tx="0" ty="0" />
     <tile x="51" y="0" tx="0" ty="0" />
-    <tile x="51" y="1" tx="0" ty="0" />
-    <tile x="51" y="2" tx="0" ty="0" />
-    <tile x="51" y="3" tx="0" ty="0" />
-    <tile x="51" y="4" tx="0" ty="0" />
     <tile x="51" y="5" tx="0" ty="0" />
     <tile x="51" y="6" tx="0" ty="0" />
     <tile x="51" y="7" tx="0" ty="0" />
@@ -1406,10 +1362,6 @@
     <tile x="51" y="30" tx="0" ty="0" />
     <tile x="51" y="31" tx="0" ty="0" />
     <tile x="52" y="0" tx="0" ty="0" />
-    <tile x="52" y="1" tx="0" ty="0" />
-    <tile x="52" y="2" tx="0" ty="0" />
-    <tile x="52" y="3" tx="0" ty="0" />
-    <tile x="52" y="4" tx="0" ty="0" />
     <tile x="52" y="5" tx="0" ty="0" />
     <tile x="52" y="6" tx="0" ty="0" />
     <tile x="52" y="7" tx="0" ty="0" />
@@ -1438,10 +1390,6 @@
     <tile x="52" y="30" tx="0" ty="0" />
     <tile x="52" y="31" tx="0" ty="0" />
     <tile x="53" y="0" tx="0" ty="0" />
-    <tile x="53" y="1" tx="0" ty="0" />
-    <tile x="53" y="2" tx="0" ty="0" />
-    <tile x="53" y="3" tx="0" ty="0" />
-    <tile x="53" y="4" tx="0" ty="0" />
     <tile x="53" y="5" tx="0" ty="0" />
     <tile x="53" y="6" tx="0" ty="0" />
     <tile x="53" y="7" tx="0" ty="0" />
@@ -1470,10 +1418,6 @@
     <tile x="53" y="30" tx="0" ty="0" />
     <tile x="53" y="31" tx="0" ty="0" />
     <tile x="54" y="0" tx="0" ty="0" />
-    <tile x="54" y="1" tx="0" ty="0" />
-    <tile x="54" y="2" tx="0" ty="0" />
-    <tile x="54" y="3" tx="0" ty="0" />
-    <tile x="54" y="4" tx="0" ty="0" />
     <tile x="54" y="5" tx="0" ty="0" />
     <tile x="54" y="6" tx="0" ty="0" />
     <tile x="54" y="7" tx="0" ty="0" />
@@ -1502,10 +1446,6 @@
     <tile x="54" y="30" tx="0" ty="0" />
     <tile x="54" y="31" tx="0" ty="0" />
     <tile x="55" y="0" tx="0" ty="0" />
-    <tile x="55" y="1" tx="0" ty="0" />
-    <tile x="55" y="2" tx="0" ty="0" />
-    <tile x="55" y="3" tx="0" ty="0" />
-    <tile x="55" y="4" tx="0" ty="0" />
     <tile x="55" y="5" tx="0" ty="0" />
     <tile x="55" y="6" tx="0" ty="0" />
     <tile x="55" y="7" tx="0" ty="0" />
@@ -1533,271 +1473,17 @@
     <tile x="55" y="29" tx="0" ty="0" />
     <tile x="55" y="30" tx="0" ty="0" />
     <tile x="55" y="31" tx="0" ty="0" />
-    <tile x="56" y="0" tx="0" ty="0" />
-    <tile x="56" y="1" tx="0" ty="0" />
-    <tile x="56" y="2" tx="0" ty="0" />
-    <tile x="56" y="3" tx="0" ty="0" />
-    <tile x="56" y="4" tx="0" ty="0" />
-    <tile x="56" y="5" tx="0" ty="0" />
-    <tile x="56" y="6" tx="0" ty="0" />
-    <tile x="56" y="7" tx="0" ty="0" />
-    <tile x="56" y="8" tx="0" ty="0" />
-    <tile x="56" y="9" tx="0" ty="0" />
-    <tile x="56" y="10" tx="0" ty="0" />
-    <tile x="56" y="11" tx="0" ty="0" />
-    <tile x="56" y="12" tx="0" ty="0" />
-    <tile x="56" y="13" tx="0" ty="0" />
-    <tile x="56" y="14" tx="0" ty="0" />
-    <tile x="56" y="15" tx="0" ty="0" />
-    <tile x="56" y="16" tx="0" ty="0" />
-    <tile x="56" y="17" tx="0" ty="0" />
-    <tile x="56" y="18" tx="0" ty="0" />
-    <tile x="56" y="19" tx="0" ty="0" />
-    <tile x="56" y="20" tx="0" ty="0" />
-    <tile x="56" y="21" tx="0" ty="0" />
-    <tile x="56" y="22" tx="0" ty="0" />
-    <tile x="56" y="23" tx="0" ty="0" />
-    <tile x="56" y="24" tx="0" ty="0" />
-    <tile x="56" y="25" tx="0" ty="0" />
-    <tile x="56" y="26" tx="0" ty="0" />
-    <tile x="56" y="27" tx="0" ty="0" />
-    <tile x="56" y="28" tx="0" ty="0" />
-    <tile x="56" y="29" tx="0" ty="0" />
-    <tile x="56" y="30" tx="0" ty="0" />
-    <tile x="56" y="31" tx="0" ty="0" />
-    <tile x="57" y="0" tx="0" ty="0" />
-    <tile x="57" y="1" tx="0" ty="0" />
-    <tile x="57" y="2" tx="0" ty="0" />
-    <tile x="57" y="3" tx="0" ty="0" />
-    <tile x="57" y="4" tx="0" ty="0" />
-    <tile x="57" y="5" tx="0" ty="0" />
-    <tile x="57" y="6" tx="0" ty="0" />
-    <tile x="57" y="7" tx="0" ty="0" />
-    <tile x="57" y="8" tx="0" ty="0" />
-    <tile x="57" y="9" tx="0" ty="0" />
-    <tile x="57" y="10" tx="0" ty="0" />
-    <tile x="57" y="11" tx="0" ty="0" />
-    <tile x="57" y="12" tx="0" ty="0" />
-    <tile x="57" y="13" tx="0" ty="0" />
-    <tile x="57" y="14" tx="0" ty="0" />
-    <tile x="57" y="15" tx="0" ty="0" />
-    <tile x="57" y="16" tx="0" ty="0" />
-    <tile x="57" y="17" tx="0" ty="0" />
-    <tile x="57" y="18" tx="0" ty="0" />
-    <tile x="57" y="19" tx="0" ty="0" />
-    <tile x="57" y="20" tx="0" ty="0" />
-    <tile x="57" y="21" tx="0" ty="0" />
-    <tile x="57" y="22" tx="0" ty="0" />
-    <tile x="57" y="23" tx="0" ty="0" />
-    <tile x="57" y="24" tx="0" ty="0" />
-    <tile x="57" y="25" tx="0" ty="0" />
-    <tile x="57" y="26" tx="0" ty="0" />
-    <tile x="57" y="27" tx="0" ty="0" />
-    <tile x="57" y="28" tx="0" ty="0" />
-    <tile x="57" y="29" tx="0" ty="0" />
-    <tile x="57" y="30" tx="0" ty="0" />
-    <tile x="57" y="31" tx="0" ty="0" />
-    <tile x="58" y="0" tx="0" ty="0" />
-    <tile x="58" y="1" tx="0" ty="0" />
-    <tile x="58" y="2" tx="0" ty="0" />
-    <tile x="58" y="3" tx="0" ty="0" />
-    <tile x="58" y="4" tx="0" ty="0" />
-    <tile x="58" y="5" tx="0" ty="0" />
-    <tile x="58" y="6" tx="0" ty="0" />
-    <tile x="58" y="7" tx="0" ty="0" />
-    <tile x="58" y="8" tx="0" ty="0" />
-    <tile x="58" y="9" tx="0" ty="0" />
-    <tile x="58" y="10" tx="0" ty="0" />
-    <tile x="58" y="11" tx="0" ty="0" />
-    <tile x="58" y="12" tx="0" ty="0" />
-    <tile x="58" y="13" tx="0" ty="0" />
-    <tile x="58" y="14" tx="0" ty="0" />
-    <tile x="58" y="15" tx="0" ty="0" />
-    <tile x="58" y="16" tx="0" ty="0" />
-    <tile x="58" y="17" tx="0" ty="0" />
-    <tile x="58" y="18" tx="0" ty="0" />
-    <tile x="58" y="19" tx="0" ty="0" />
-    <tile x="58" y="20" tx="0" ty="0" />
-    <tile x="58" y="21" tx="0" ty="0" />
-    <tile x="58" y="22" tx="0" ty="0" />
-    <tile x="58" y="23" tx="0" ty="0" />
-    <tile x="58" y="24" tx="0" ty="0" />
-    <tile x="58" y="25" tx="0" ty="0" />
-    <tile x="58" y="26" tx="0" ty="0" />
-    <tile x="58" y="27" tx="0" ty="0" />
-    <tile x="58" y="28" tx="0" ty="0" />
-    <tile x="58" y="29" tx="0" ty="0" />
-    <tile x="58" y="30" tx="0" ty="0" />
-    <tile x="58" y="31" tx="0" ty="0" />
-    <tile x="59" y="0" tx="0" ty="0" />
-    <tile x="59" y="1" tx="0" ty="0" />
-    <tile x="59" y="2" tx="0" ty="0" />
-    <tile x="59" y="3" tx="0" ty="0" />
-    <tile x="59" y="4" tx="0" ty="0" />
-    <tile x="59" y="5" tx="0" ty="0" />
-    <tile x="59" y="6" tx="0" ty="0" />
-    <tile x="59" y="7" tx="0" ty="0" />
-    <tile x="59" y="8" tx="0" ty="0" />
-    <tile x="59" y="9" tx="0" ty="0" />
-    <tile x="59" y="10" tx="0" ty="0" />
-    <tile x="59" y="11" tx="0" ty="0" />
-    <tile x="59" y="12" tx="0" ty="0" />
-    <tile x="59" y="13" tx="0" ty="0" />
-    <tile x="59" y="14" tx="0" ty="0" />
-    <tile x="59" y="15" tx="0" ty="0" />
-    <tile x="59" y="16" tx="0" ty="0" />
-    <tile x="59" y="17" tx="0" ty="0" />
-    <tile x="59" y="18" tx="0" ty="0" />
-    <tile x="59" y="19" tx="0" ty="0" />
-    <tile x="59" y="20" tx="0" ty="0" />
-    <tile x="59" y="21" tx="0" ty="0" />
-    <tile x="59" y="22" tx="0" ty="0" />
-    <tile x="59" y="23" tx="0" ty="0" />
-    <tile x="59" y="24" tx="0" ty="0" />
-    <tile x="59" y="25" tx="0" ty="0" />
-    <tile x="59" y="26" tx="0" ty="0" />
-    <tile x="59" y="27" tx="0" ty="0" />
-    <tile x="59" y="28" tx="0" ty="0" />
-    <tile x="59" y="29" tx="0" ty="0" />
-    <tile x="59" y="30" tx="0" ty="0" />
-    <tile x="59" y="31" tx="0" ty="0" />
-    <tile x="60" y="0" tx="0" ty="0" />
-    <tile x="60" y="1" tx="0" ty="0" />
-    <tile x="60" y="2" tx="0" ty="0" />
-    <tile x="60" y="3" tx="0" ty="0" />
-    <tile x="60" y="4" tx="0" ty="0" />
-    <tile x="60" y="5" tx="0" ty="0" />
-    <tile x="60" y="6" tx="0" ty="0" />
-    <tile x="60" y="7" tx="0" ty="0" />
-    <tile x="60" y="8" tx="0" ty="0" />
-    <tile x="60" y="9" tx="0" ty="0" />
-    <tile x="60" y="10" tx="0" ty="0" />
-    <tile x="60" y="11" tx="0" ty="0" />
-    <tile x="60" y="12" tx="0" ty="0" />
-    <tile x="60" y="13" tx="0" ty="0" />
-    <tile x="60" y="14" tx="0" ty="0" />
-    <tile x="60" y="15" tx="0" ty="0" />
-    <tile x="60" y="16" tx="0" ty="0" />
-    <tile x="60" y="17" tx="0" ty="0" />
-    <tile x="60" y="18" tx="0" ty="0" />
-    <tile x="60" y="19" tx="0" ty="0" />
-    <tile x="60" y="20" tx="0" ty="0" />
-    <tile x="60" y="21" tx="0" ty="0" />
-    <tile x="60" y="22" tx="0" ty="0" />
-    <tile x="60" y="23" tx="0" ty="0" />
-    <tile x="60" y="24" tx="0" ty="0" />
-    <tile x="60" y="25" tx="0" ty="0" />
-    <tile x="60" y="26" tx="0" ty="0" />
-    <tile x="60" y="27" tx="0" ty="0" />
-    <tile x="60" y="28" tx="0" ty="0" />
-    <tile x="60" y="29" tx="0" ty="0" />
-    <tile x="60" y="30" tx="0" ty="0" />
-    <tile x="60" y="31" tx="0" ty="0" />
-    <tile x="61" y="0" tx="0" ty="0" />
-    <tile x="61" y="1" tx="0" ty="0" />
-    <tile x="61" y="2" tx="0" ty="0" />
-    <tile x="61" y="3" tx="0" ty="0" />
-    <tile x="61" y="4" tx="0" ty="0" />
-    <tile x="61" y="5" tx="0" ty="0" />
-    <tile x="61" y="6" tx="0" ty="0" />
-    <tile x="61" y="7" tx="0" ty="0" />
-    <tile x="61" y="8" tx="0" ty="0" />
-    <tile x="61" y="9" tx="0" ty="0" />
-    <tile x="61" y="10" tx="0" ty="0" />
-    <tile x="61" y="11" tx="0" ty="0" />
-    <tile x="61" y="12" tx="0" ty="0" />
-    <tile x="61" y="13" tx="0" ty="0" />
-    <tile x="61" y="14" tx="0" ty="0" />
-    <tile x="61" y="15" tx="0" ty="0" />
-    <tile x="61" y="16" tx="0" ty="0" />
-    <tile x="61" y="17" tx="0" ty="0" />
-    <tile x="61" y="18" tx="0" ty="0" />
-    <tile x="61" y="19" tx="0" ty="0" />
-    <tile x="61" y="20" tx="0" ty="0" />
-    <tile x="61" y="21" tx="0" ty="0" />
-    <tile x="61" y="22" tx="0" ty="0" />
-    <tile x="61" y="23" tx="0" ty="0" />
-    <tile x="61" y="24" tx="0" ty="0" />
-    <tile x="61" y="25" tx="0" ty="0" />
-    <tile x="61" y="26" tx="0" ty="0" />
-    <tile x="61" y="27" tx="0" ty="0" />
-    <tile x="61" y="28" tx="0" ty="0" />
-    <tile x="61" y="29" tx="0" ty="0" />
-    <tile x="61" y="30" tx="0" ty="0" />
-    <tile x="61" y="31" tx="0" ty="0" />
-    <tile x="62" y="0" tx="0" ty="0" />
-    <tile x="62" y="1" tx="0" ty="0" />
-    <tile x="62" y="2" tx="0" ty="0" />
-    <tile x="62" y="3" tx="0" ty="0" />
-    <tile x="62" y="4" tx="0" ty="0" />
-    <tile x="62" y="5" tx="0" ty="0" />
-    <tile x="62" y="6" tx="0" ty="0" />
-    <tile x="62" y="7" tx="0" ty="0" />
-    <tile x="62" y="8" tx="0" ty="0" />
-    <tile x="62" y="9" tx="0" ty="0" />
-    <tile x="62" y="10" tx="0" ty="0" />
-    <tile x="62" y="11" tx="0" ty="0" />
-    <tile x="62" y="12" tx="0" ty="0" />
-    <tile x="62" y="13" tx="0" ty="0" />
-    <tile x="62" y="14" tx="0" ty="0" />
-    <tile x="62" y="15" tx="0" ty="0" />
-    <tile x="62" y="16" tx="0" ty="0" />
-    <tile x="62" y="17" tx="0" ty="0" />
-    <tile x="62" y="18" tx="0" ty="0" />
-    <tile x="62" y="19" tx="0" ty="0" />
-    <tile x="62" y="20" tx="0" ty="0" />
-    <tile x="62" y="21" tx="0" ty="0" />
-    <tile x="62" y="22" tx="0" ty="0" />
-    <tile x="62" y="23" tx="0" ty="0" />
-    <tile x="62" y="24" tx="0" ty="0" />
-    <tile x="62" y="25" tx="0" ty="0" />
-    <tile x="62" y="26" tx="0" ty="0" />
-    <tile x="62" y="27" tx="0" ty="0" />
-    <tile x="62" y="28" tx="0" ty="0" />
-    <tile x="62" y="29" tx="0" ty="0" />
-    <tile x="62" y="30" tx="0" ty="0" />
-    <tile x="62" y="31" tx="0" ty="0" />
-    <tile x="63" y="0" tx="0" ty="0" />
-    <tile x="63" y="1" tx="0" ty="0" />
-    <tile x="63" y="2" tx="0" ty="0" />
-    <tile x="63" y="3" tx="0" ty="0" />
-    <tile x="63" y="4" tx="0" ty="0" />
-    <tile x="63" y="5" tx="0" ty="0" />
-    <tile x="63" y="6" tx="0" ty="0" />
-    <tile x="63" y="7" tx="0" ty="0" />
-    <tile x="63" y="8" tx="0" ty="0" />
-    <tile x="63" y="9" tx="0" ty="0" />
-    <tile x="63" y="10" tx="0" ty="0" />
-    <tile x="63" y="11" tx="0" ty="0" />
-    <tile x="63" y="12" tx="0" ty="0" />
-    <tile x="63" y="13" tx="0" ty="0" />
-    <tile x="63" y="14" tx="0" ty="0" />
-    <tile x="63" y="15" tx="0" ty="0" />
-    <tile x="63" y="16" tx="0" ty="0" />
-    <tile x="63" y="17" tx="0" ty="0" />
-    <tile x="63" y="18" tx="0" ty="0" />
-    <tile x="63" y="19" tx="0" ty="0" />
-    <tile x="63" y="20" tx="0" ty="0" />
-    <tile x="63" y="21" tx="0" ty="0" />
-    <tile x="63" y="22" tx="0" ty="0" />
-    <tile x="63" y="23" tx="0" ty="0" />
-    <tile x="63" y="24" tx="0" ty="0" />
-    <tile x="63" y="25" tx="0" ty="0" />
-    <tile x="63" y="26" tx="0" ty="0" />
-    <tile x="63" y="27" tx="0" ty="0" />
-    <tile x="63" y="28" tx="0" ty="0" />
-    <tile x="63" y="29" tx="0" ty="0" />
-    <tile x="63" y="30" tx="0" ty="0" />
-    <tile x="63" y="31" tx="0" ty="0" />
   </tiles>
   <entities>
-    <PlayerHuman id="0" x="72" y="176" />
-    <Torch id="1" x="112" y="176" scale="1" />
-    <Torch id="3" x="176" y="176" scale="1" />
-    <Torch id="4" x="224" y="152" scale="1" />
-    <Torch id="5" x="280" y="128" scale="1" />
-    <Torch id="6" x="296" y="40" scale="1" />
-    <Torch id="8" x="344" y="16" scale="1" />
-    <LevelTrigger id="2" x="352" y="8" width="8" height="8" />
+    <PlayerHuman id="0" x="72" y="200" />
+    <Torch id="1" x="104" y="200" scale="1" />
+    <Torch id="3" x="168" y="200" scale="1" />
+    <Torch id="4" x="224" y="176" scale="1" />
+    <Torch id="5" x="272" y="152" scale="1" />
+    <Torch id="6" x="280" y="64" scale="1" />
+    <Torch id="8" x="328" y="32" scale="1" />
+    <LevelTrigger id="2" x="384" y="8" width="8" height="32" />
+    <Torch id="7" x="56" y="200" scale="1" />
+    <Torch id="9" x="400" y="16" scale="1" />
   </entities>
 </level>

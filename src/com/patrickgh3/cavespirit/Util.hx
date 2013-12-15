@@ -1,6 +1,8 @@
 package com.patrickgh3.cavespirit;
 
 import com.haxepunk.Entity;
+import com.haxepunk.HXP;
+import com.patrickgh3.cavespirit.scenes.GameScene;
 
 /**
  * Holds utility functions.
