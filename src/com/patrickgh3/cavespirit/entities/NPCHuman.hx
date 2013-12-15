@@ -28,9 +28,9 @@ class NPCHuman extends Human
 	public inline static var ai_nothing:Int = 0;
 	public inline static var ai_pace:Int = 1;
 	
-	public function new(x:Int, y:Int, behavior:Int, message:String = null) 
+	public function new(x:Int, y:Int, imagesrc:String, behavior:Int, message:String = null) 
 	{
-		super(x, y);
+		super(x, y, imagesrc);
 		this.behavior = behavior;
 		this.message = message;
 		if (message != null)
@@ -74,10 +74,13 @@ class NPCHuman extends Human
 			else walkRight();
 		}
 		
-		texthitbox.x = x - 48;
-		texthitbox.y = y - 32;
-		text.x = x;
-		text.y = y;
+		if (message != null)
+		{
+			texthitbox.x = x - 48;
+			texthitbox.y = y - 32;
+			text.x = x;
+			text.y = y;
+		}
 		
 		if (messagecount >= 0) messagecount++;
 		if (messagecount == 60 * 5)
@@ -91,7 +94,9 @@ class NPCHuman extends Human
 		{
 			messagecount = 0;
 			HXP.scene.add(text);
-			trace("a");
+			count = 0;
+			countgoal = 90 + Util.randInt(60);
+			state == state_wait;
 		}
 		
 	}

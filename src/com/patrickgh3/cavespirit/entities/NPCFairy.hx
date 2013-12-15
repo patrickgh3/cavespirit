@@ -16,9 +16,9 @@ class NPCFairy extends Fairy
 	private var texthitbox:Entity;
 	private var messagecount:Int = -1;
 
-	public function new(x:Int, y:Int, partner:NPCHuman = null, message:String = null) 
+	public function new(x:Int, y:Int, imagesrc:String, partner:NPCHuman = null, message:String = null) 
 	{
-		super(x, y);
+		super(x, y, imagesrc);
 		this.partner = partner;
 		this.message = message;
 		if (message != null)
@@ -37,10 +37,13 @@ class NPCFairy extends Fairy
 	{
 		super.update();
 		
-		texthitbox.x = x - 64;
-		texthitbox.y = y - 16;
-		text.x = x;
-		text.y = y;
+		if (message != null)
+		{
+			texthitbox.x = x - 64;
+			texthitbox.y = y - 16;
+			text.x = x;
+			text.y = y;
+		}
 		
 		if (messagecount >= 0) messagecount++;
 		if (messagecount == 60 * 5)

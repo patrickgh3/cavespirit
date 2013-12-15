@@ -107,6 +107,7 @@
       <ValueDefinitions>
         <ValueDefinition xsi:type="IntValueDefinition" Name="behavior" Default="0" Min="0" Max="100" ShowSlider="false" />
         <ValueDefinition xsi:type="StringValueDefinition" Name="message" Default="none" MaxChars="-1" MultiLine="true" />
+        <ValueDefinition xsi:type="StringValueDefinition" Name="sprite" Default="gfx/human_green.png" MaxChars="-1" MultiLine="false" />
       </ValueDefinitions>
       <NodesDefinition Enabled="false" Limit="-1" DrawMode="None" Ghost="false" />
     </EntityDefinition>
@@ -125,6 +126,7 @@
       <ValueDefinitions>
         <ValueDefinition xsi:type="IntValueDefinition" Name="behavior" Default="0" Min="0" Max="100" ShowSlider="false" />
         <ValueDefinition xsi:type="StringValueDefinition" Name="message" Default="none" MaxChars="-1" MultiLine="true" />
+        <ValueDefinition xsi:type="StringValueDefinition" Name="sprite" Default="gfx/fairy_blue.png" MaxChars="-1" MultiLine="false" />
       </ValueDefinitions>
       <NodesDefinition Enabled="false" Limit="-1" DrawMode="None" Ghost="false" />
     </EntityDefinition>

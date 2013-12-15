@@ -10,7 +10,7 @@ class PlayerHuman extends Human
 {
 	public function new(x:Int, y:Int) 
 	{
-		super(x, y);
+		super(x, y, "gfx/human.png");
 	}
 	
 	override public function update():Void

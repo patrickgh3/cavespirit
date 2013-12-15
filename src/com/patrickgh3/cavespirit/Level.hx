@@ -72,14 +72,18 @@ class Level
 				y = Std.parseInt(ent.get("y"));
 				var b:Int = Std.parseInt(ent.get("behavior"));
 				var m:String = ent.get("message");
-				HXP.scene.add(new NPCHuman(x, y, b, m));
+				if (m == "none") m = null;
+				var s:String = ent.get("sprite");
+				HXP.scene.add(new NPCHuman(x, y, s, b, m));
 			}
 			for (ent in layer.elementsNamed("NPCFairy"))
 			{
 				x = Std.parseInt(ent.get("x"));
 				y = Std.parseInt(ent.get("y"));
 				var m:String = ent.get("message");
-				HXP.scene.add(new NPCFairy(x, y, null, m)); // TODO: partner fairies!
+				if (m == "none") m = null;
+				var s:String = ent.get("sprite");
+				HXP.scene.add(new NPCFairy(x, y, s, null, m)); // TODO: partner fairies!
 			}
 			for (ent in layer.elementsNamed("PlayerHuman"))
 			{

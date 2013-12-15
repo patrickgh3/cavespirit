@@ -1651,8 +1651,8 @@
     <tile x="63" y="31" tx="0" ty="0" />
   </tiles>
   <entities>
-    <NPCHuman id="0" x="232" y="120" behavior="1" message="Hello." />
-    <NPCFairy id="1" x="296" y="88" behavior="0" message="You two&#xD;look cute!" />
+    <NPCHuman id="0" x="232" y="120" behavior="1" message="Hello." sprite="gfx/human_green.png" />
+    <NPCFairy id="1" x="296" y="88" behavior="0" message="You two&#xD;look cute!" sprite="gfx/fairy_blue.png" />
     <PlayerHuman id="2" x="16" y="144" />
     <PlayerFairy id="3" x="32" y="136" />
   </entities>

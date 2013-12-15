@@ -20,13 +20,14 @@ class Fairy extends Entity
 	private static inline var speed:Float = 0.65;
 	private var light:Light;
 	private var movingextra:Bool = false; // to prevent getting stuck on corners, move until past the corner, then stop.
+	private var movingextracount:Int = 0;
 	
-	public function new(x:Int, y:Int) 
+	public function new(x:Int, y:Int, imagesrc:String) 
 	{
 		super(x, y);
 		velocity = new Point();
 		target = new Point();
-		graphic = sprite = new Spritemap("gfx/fairy.png", 16, 16);
+		graphic = sprite = new Spritemap(imagesrc, 16, 16);
 		sprite.add("fly", [0, 1, 2, 3], 6);
 		light = new Light(0, 0, 1, 1);
 		GameScene.lighting.add(light);
@@ -90,17 +91,13 @@ class Fairy extends Entity
 			i++;
 		}
 		
-		if (numcollisions == 2)
-		{
-			travelling = false;
-			velocity.x = velocity.y = 0;
-		}
-		
-		if (movingextra && numcollisions == 0)
+		if (movingextra) movingextracount++;
+		if ((movingextra && numcollisions == 0) || movingextracount == 15 || numcollisions == 2)
 		{
 			travelling = false;
 			velocity.x = velocity.y = 0;
 			movingextra = false;
+			movingextracount = 0;
 		}
 	}
 	

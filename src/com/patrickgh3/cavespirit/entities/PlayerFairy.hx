@@ -11,7 +11,7 @@ class PlayerFairy extends Fairy
 {
 	public function new(x:Int, y:Int) 
 	{
-		super(x, y);
+		super(x, y, "gfx/fairy.png");
 	}
 	
 	override public function update():Void

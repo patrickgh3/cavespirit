@@ -19,11 +19,11 @@ class Human extends Entity
 	private var velocity:Point;
 	private var sprite:Spritemap;
 	
-	public function new(x:Int, y:Int) 
+	public function new(x:Int, y:Int, imagesrc:String) 
 	{
 		super(x, y);
 		velocity = new Point();
-		graphic = sprite = new Spritemap("gfx/human.png", 12, 24);
+		graphic = sprite = new Spritemap(imagesrc, 12, 24);
 		sprite.add("idle", [0]);
 		sprite.add("walk", [1, 0], 4);
 		sprite.add("jump", [2]);
@@ -46,7 +46,6 @@ class Human extends Entity
 		else if (onGround && velocity.x != 0) sprite.play("walk");
 		else if (!onGround && velocity.y < 0) sprite.play("jump");
 		else if (!onGround && velocity.y > 0.25) sprite.play("fall");
-		if (velocity.y > 0.25) sprite.play("fall");
 	}
 	
 	private function move():Void
@@ -86,6 +85,8 @@ class Human extends Entity
 			}
 			i++;
 		}
+		
+		if (i != 0 && velocity.y != 0) onGround = false;
 	}
 	
 	private function walkRight():Void
