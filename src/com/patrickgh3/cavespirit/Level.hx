@@ -72,11 +72,19 @@ class Level
 			u.color = 0x23384D;
 			HXP.scene.add(new Entity(64 - 4, 112 - 8, u));
 			
-			y = 96 - 16;
+			y = 96 - 16 + 8;
 			x = 56;
 			HXP.scene.add(new PlayButton(x, y, true));
 			HXP.scene.add(new PlayButton(x + 48, y, false));
-
+		}
+		else if (levelindex == 1)
+		{
+			HXP.scene.add(new Entity(64, 184, new Image("gfx/hint1.png")));
+			HXP.scene.add(new Entity(144 - 4, 200, new Image("gfx/hint2.png")));
+		}
+		else if (levelindex == 0)
+		{
+			HXP.scene.add(new Entity(80, 80, new Image("gfx/hint3.png")));
 		}
 		
 		// load entities
@@ -107,7 +115,8 @@ class Level
 				var m:String = ent.get("message");
 				if (m == "none") m = null;
 				var s:String = ent.get("sprite");
-				HXP.scene.add(new NPCFairy(x, y, s, null, m)); // TODO: partner fairies!
+				var b:Int = Std.parseInt(ent.get("behavior"));
+				HXP.scene.add(new NPCFairy(x, y, s, b, m));
 			}
 			for (ent in layer.elementsNamed("PlayerHuman"))
 			{

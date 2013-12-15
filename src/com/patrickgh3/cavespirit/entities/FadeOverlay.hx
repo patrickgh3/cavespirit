@@ -11,7 +11,7 @@ import com.patrickgh3.cavespirit.scenes.GameScene;
 class FadeOverlay extends Entity
 {
 	private var count:Int = 0;
-	private var fadetime:Int = 30;
+	private var fadetime:Int = 40;
 	private var image:Image;
 	private var state:Int;
 	private inline static var state_idle:Int = 0;

@@ -1988,7 +1988,7 @@
     <DeathTrigger id="5" x="304" y="176" width="24" height="8" />
     <Torch id="6" x="8" y="144" scale="1" />
     <NPCHuman id="0" x="248" y="120" behavior="1" message="Hello." sprite="gfx/human_green.png" />
-    <NPCFairy id="1" x="400" y="104" behavior="0" message="You two&#xD;&#xD;&#xA;look cute!" sprite="gfx/fairy_blue.png" />
+    <NPCFairy id="1" x="400" y="104" behavior="1" message="You two&#xD;look cute!" sprite="gfx/fairy_blue.png" />
     <Torch id="7" x="224" y="112" scale="1" />
     <Torch id="8" x="376" y="96" scale="1" />
     <NPCFairy id="9" x="504" y="112" behavior="0" message="none" sprite="gfx/fairy_yellow.png" />
@@ -1996,6 +1996,6 @@
     <LevelTrigger id="12" x="656" y="128" width="8" height="32" />
     <Torch id="13" x="648" y="136" scale="1" />
     <DeathTrigger id="14" x="136" y="200" width="24" height="8" />
-    <NPCHuman id="11" x="560" y="152" behavior="0" message="none" sprite="gfx/human_blue.png" />
+    <NPCHuman id="11" x="560" y="152" behavior="0" message="none" sprite="gfx/human_green.png" />
   </entities>
 </level>

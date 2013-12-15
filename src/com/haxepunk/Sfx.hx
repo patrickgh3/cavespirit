@@ -4,6 +4,7 @@ import flash.events.Event;
 import flash.media.Sound;
 import flash.media.SoundChannel;
 import flash.media.SoundTransform;
+import com.patrickgh3.cavespirit.scenes.GameScene;
 
 #if nme
 import nme.Assets;
@@ -65,6 +66,7 @@ class Sfx
 	 */
 	public function play(volume:Float = 1, pan:Float = 0, loop:Bool = false)
 	{
+		if (GameScene.muted) return;
 		if (_sound == null) return;
 		if (playing) stop();
 		_pan = HXP.clamp(pan, -1, 1);

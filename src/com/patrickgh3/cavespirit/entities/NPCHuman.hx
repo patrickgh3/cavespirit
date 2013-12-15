@@ -90,7 +90,8 @@ class NPCHuman extends Human
 		}
 		
 		if (texthitbox != null && messagecount == -1
-			&& (Util.entityCollide(texthitbox, GameScene.human) || Util.entityCollide(texthitbox, GameScene.fairy)))
+			&& ((Util.entityCollide(texthitbox, GameScene.human) || Util.entityCollide(texthitbox, GameScene.fairy))
+			|| (GameScene.human.x >= this.x - 8 || GameScene.fairy.x > this.x - 8)))
 		{
 			messagecount = 0;
 			HXP.scene.add(text);

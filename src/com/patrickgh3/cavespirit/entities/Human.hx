@@ -22,6 +22,7 @@ class Human extends Entity
 	private var sfxStep:Sfx;
 	private var sfxJump:Sfx;
 	private var lastframe:Int;
+	private var firsttick:Bool = true;
 	
 	public function new(x:Int, y:Int, imagesrc:String) 
 	{
@@ -52,6 +53,8 @@ class Human extends Entity
 		else if (onGround && velocity.x != 0) sprite.play("walk");
 		else if (!onGround && velocity.y < 0) sprite.play("jump");
 		else if (!onGround && velocity.y > 0.25) sprite.play("fall");
+		
+		firsttick = false;
 	}
 	
 	private function move():Void
@@ -102,6 +105,7 @@ class Human extends Entity
 	
 	private function stepsound():Void
 	{
+		if (firsttick) return;
 		if (this._class != "com.patrickgh3.cavespirit.entities.PlayerHuman") return;
 		if (onCamera) sfxStep.play(0.25);
 	}

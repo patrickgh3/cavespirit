@@ -26,6 +26,8 @@ class GameScene extends Scene
 	private var sfxMusic:Sfx;
 	public static var musicstarted:Bool = false;
 	
+	public static var muted:Bool = false;
+	
 	public inline static var prefwidth:Int = 192;
 	public inline static var prefheight:Int = 144;
 	
@@ -61,6 +63,20 @@ class GameScene extends Scene
 		else if (Input.pressed(Key.G)) changeLevel(1);
 		else if (Input.pressed(Key.DIGIT_2)) changeLevel(2);
 		else if (Input.pressed(Key.DIGIT_3)) changeLevel(3);
+		else if (Input.pressed(Key.DIGIT_4)) changeLevel(4);
+		
+		if (Input.pressed(Key.M))
+		{
+			if (muted)
+			{
+				muted = false;
+			}
+			else if (!muted)
+			{
+				muted = true;
+				stopMusic();
+			}
+		}
 		
 		// camera (todo: smooth?)
 		if (fairy == null && human == null)
@@ -102,6 +118,11 @@ class GameScene extends Scene
 	public function startMusic():Void
 	{
 		sfxMusic.loop(0.5);
+	}
+	
+	public function stopMusic():Void
+	{
+		// TODO: fade out!!
 	}
 	
 	// special levelindex codes
