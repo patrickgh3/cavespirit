@@ -16,7 +16,7 @@ class Fairy extends Entity
 	private var firsttick:Bool = true;
 	private var travelling:Bool = false;
 	private var target:Point;
-	private static inline var targetrange:Float = 3;
+	private static inline var targetrange:Float = 2;
 	private static inline var speed:Float = 0.65;
 	private var light:Light;
 	private var movingextra:Bool = false; // to prevent getting stuck on corners, move until past the corner, then stop.
@@ -107,8 +107,8 @@ class Fairy extends Entity
 	private function flyToPoint(x:Int, y:Int):Void
 	{
 		velocity.x = velocity.y = 0;
-		target.x = x - 8;
-		target.y = y - 8;
+		target.x = x - 6;
+		target.y = y - 6;
 		if (Math.pow(target.x - this.x, 2) + Math.pow(target.y - this.y, 2) < 3 * 3) return;
 		
 		travelling = true;

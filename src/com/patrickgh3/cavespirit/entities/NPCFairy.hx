@@ -38,7 +38,7 @@ class NPCFairy extends Fairy
 		super.update();
 		
 		texthitbox.x = x - 64;
-		texthitbox.y = y - 32;
+		texthitbox.y = y - 16;
 		text.x = x;
 		text.y = y;
 		
@@ -54,7 +54,6 @@ class NPCFairy extends Fairy
 		{
 			messagecount = 0;
 			HXP.scene.add(text);
-			trace("a");
 		}
 	}
 	

@@ -25,7 +25,7 @@ class Level
 	
 	public static function init():Void
 	{
-		rect = new Rectangle();
+		rect = new Rectangle(0, 0, tilewidth, tileheight);
 	}
 	
 	public static function loadLevel(levelindex:Int):Void
@@ -105,16 +105,96 @@ class Level
 				ty = Std.parseInt(tile.get("ty"));
 				x = Std.parseInt(tile.get("x"));
 				y = Std.parseInt(tile.get("y"));
+				mask[x][y] = 1;
+				if (tx == 0 && ty == 0) continue;
+				
 				rect.x = tx * tilewidth;
 				rect.y = ty * tilewidth;
-				rect.width = tilewidth;
-				rect.height = tileheight;
 				var g:Graphic = new Image("gfx/tileset.png", rect);
 				var e:Entity = new Entity(x * 8, y * 8, g);
 				HXP.scene.add(e);
-				mask[x][y] = 1;
 			}
 		}
+		for (layer in xml.elementsNamed("tiles"))
+		{
+			for (tile in layer.elementsNamed("tile"))
+			{
+				tx = Std.parseInt(tile.get("tx"));
+				ty = Std.parseInt(tile.get("ty"));
+				x = Std.parseInt(tile.get("x"));
+				y = Std.parseInt(tile.get("y"));
+				if (!(tx == 0 && ty == 0)) continue;
+				
+				var top:Bool = checkmask(x, y - 1) == 1;
+				var bottom:Bool = checkmask(x, y + 1) == 1;
+				var left:Bool = checkmask(x - 1, y) == 1;
+				var right:Bool = checkmask(x + 1, y) == 1;
+				var topleft:Bool = checkmask(x - 1, y - 1) == 1;
+				var topright:Bool = checkmask(x + 1, y - 1) == 1;
+				var bottomleft:Bool = checkmask(x - 1, y + 1) == 1;
+				var bottomright:Bool = checkmask(x + 1, y + 1) == 1;
+				
+				// surrounded
+				if (top && bottom && left && right)
+				{
+					rect.x = 1 + Util.randInt(3);
+					rect.y = 0;
+				}
+				// corners
+				else if (!top && !left)
+				{
+					rect.x = 0;
+					rect.y = 2;
+				}
+				else if (!top && !right)
+				{
+					rect.x = 1;
+					rect.y = 2;
+				}
+				else if (!bottom && !left)
+				{
+					rect.x = 2;
+					rect.y = 2;
+				}
+				else if (!bottom && !right)
+				{
+					rect.x = 3;
+					rect.y = 2;
+				}
+				// edges
+				else if (!top)
+				{
+					rect.x = 0;
+					rect.y = 1;
+				}
+				else if (!bottom)
+				{
+					rect.x = 1;
+					rect.y = 1;
+				}
+				else if (!left)
+				{
+					rect.x = 2;
+					rect.y = 1;
+				}
+				else if (!right)
+				{
+					rect.x = 3;
+					rect.y = 1;
+				}
+				rect.x *= tilewidth;
+				rect.y *= tileheight;
+				var g:Graphic = new Image("gfx/tileset.png", rect);
+				var e:Entity = new Entity(x * 8, y * 8, g);
+				HXP.scene.add(e);
+			}
+		}
+	}
+	
+	private static function checkmask(x:Int, y:Int):Int
+	{
+		if (x < 0 || x >= levelwidth || y < 0 || y >= levelheight) return 1;
+		else return mask[x][y];
 	}
 	
 }
