@@ -22,6 +22,8 @@ class Fairy extends Entity
 	private var movingextra:Bool = false; // to prevent getting stuck on corners, move until past the corner, then stop.
 	private var movingextracount:Int = 0;
 	
+	private static inline var maxscale:Float = 1;
+	
 	public function new(x:Int, y:Int, imagesrc:String) 
 	{
 		super(x, y);
@@ -29,7 +31,7 @@ class Fairy extends Entity
 		target = new Point();
 		graphic = sprite = new Spritemap(imagesrc, 16, 16);
 		sprite.add("fly", [0, 1, 2, 3], 6);
-		light = new Light(0, 0, 1, 1);
+		light = new Light(0, 0, maxscale, 1);
 		GameScene.lighting.add(light);
 		layer = -3;
 		width = 8;

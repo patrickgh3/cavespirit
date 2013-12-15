@@ -3,15 +3,27 @@ package com.patrickgh3.cavespirit.entities;
 import com.haxepunk.HXP;
 import com.haxepunk.utils.Input;
 import com.haxepunk.utils.Key;
+import com.patrickgh3.cavespirit.scenes.GameScene;
+import com.patrickgh3.cavespirit.Util;
 
 /**
  * Fairy the player controls.
  */
 class PlayerFairy extends Fairy
 {
+	private var partner:PlayerHuman;
+	private var count:Int = 0;
+	private var fadetime:Int = 420;
+	private var holdtime:Int = 120;
+	private var distance:Int = 20;
+	private var heartcount:Int = 0;
+	private var heartspeed:Int = 1;
+	
 	public function new(x:Int, y:Int) 
 	{
 		super(x, y, "gfx/fairy.png");
+		if (GameScene.human == null) light.scale = 0;
+		else partner = GameScene.human;
 	}
 	
 	override public function update():Void
@@ -22,6 +34,42 @@ class PlayerFairy extends Fairy
 		}
 		
 		super.update();
+		
+		if (partner != null)
+		{
+			if (Math.pow(x + 4 - (partner.x + 4), 2) + Math.pow(y + 4 - (partner.y + 10), 2) < distance * distance)
+			{
+				if (count % 2 == 1) count++;
+				count -= 2;
+				if (count < 0) count = 0;
+				updateLight();
+				
+				heartcount++;
+				if (heartcount == heartspeed)
+				{
+					heartcount = 0;
+					heartspeed = 60 + Util.randInt(180);
+					heart();
+				}
+			}
+			else
+			{
+				if (count < fadetime) count++;
+				updateLight();
+				heartcount = heartspeed - 1;
+			}
+		}
+	}
+	
+	private function updateLight():Void
+	{
+		light.scale = (fadetime - count) / fadetime * Fairy.maxscale;
+	}
+	
+	private function heart():Void
+	{
+		if (Math.random() < 0.5) HXP.scene.add(new HeartParticle(x + 4, y + 4, true));
+		else HXP.scene.add(new HeartParticle(partner.x + 4, partner.y + 10, false));
 	}
 	
 }
