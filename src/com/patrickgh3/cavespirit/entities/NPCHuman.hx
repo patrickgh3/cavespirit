@@ -40,7 +40,7 @@ class NPCHuman extends Human
 			text = new Entity(0, 0, t);
 			text.layer = -4;
 			texthitbox = new Entity();
-			texthitbox.width = 48;
+			texthitbox.width = 32;
 			texthitbox.height = 32;
 		}
 	}
@@ -76,8 +76,8 @@ class NPCHuman extends Human
 		
 		if (message != null)
 		{
-			texthitbox.x = x - 48;
-			texthitbox.y = y - 32;
+			texthitbox.x = x - 32;
+			texthitbox.y = y - 16;
 			text.x = x;
 			text.y = y;
 		}

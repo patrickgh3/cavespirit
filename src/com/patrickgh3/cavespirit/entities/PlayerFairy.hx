@@ -1,6 +1,7 @@
 package com.patrickgh3.cavespirit.entities;
 
 import com.haxepunk.HXP;
+import com.haxepunk.Sfx;
 import com.haxepunk.utils.Input;
 import com.haxepunk.utils.Key;
 import com.patrickgh3.cavespirit.scenes.GameScene;
@@ -13,11 +14,13 @@ class PlayerFairy extends Fairy
 {
 	private var partner:PlayerHuman;
 	private var count:Int = 0;
-	private var fadetime:Int = 420;
+	private var fadetime:Int = 360;
 	private var holdtime:Int = 60;
 	private var distance:Int = 20;
 	private var heartcount:Int = 0;
 	private var heartspeed:Int = 1;
+	private var sfxHeart1:Sfx;
+	private var sfxHeart2:Sfx;
 	
 	public function new(x:Int, y:Int) 
 	{
@@ -27,12 +30,14 @@ class PlayerFairy extends Fairy
 		else
 		{
 			partner = GameScene.human;
-			if (cast(HXP.scene, GameScene).levelindex == 2)
+			if (GameScene.levelindex == 2)
 			{
 				count = holdtime + fadetime;
 				light.scale = 0;
 			}
 		}
+		sfxHeart1 = new Sfx("snd/heart1.wav");
+		sfxHeart2 = new Sfx("snd/heart2.wav");
 	}
 	
 	override public function update():Void
@@ -48,7 +53,7 @@ class PlayerFairy extends Fairy
 		{
 			if (Math.pow(x + 4 - (partner.x + 4), 2) + Math.pow(y + 4 - (partner.y + 10), 2) < distance * distance)
 			{
-				count -= 3;
+				count -= 4;
 				if (count < 0) count = 0;
 				updateLight();
 				
@@ -56,7 +61,7 @@ class PlayerFairy extends Fairy
 				if (heartcount == heartspeed)
 				{
 					heartcount = 0;
-					heartspeed = 30 + Util.randInt(90);
+					heartspeed = 30 + Util.randInt(60);
 					heart();
 				}
 			}
@@ -72,6 +77,12 @@ class PlayerFairy extends Fairy
 		{
 			GameScene.fadeoverlay.fadeout(-2);
 		}
+		
+		if (GameScene.levelindex == 2 && count < holdtime + fadetime && GameScene.musicstarted == false)
+		{
+			cast(HXP.scene, GameScene).startMusic();
+			GameScene.musicstarted = true;
+		}
 	}
 	
 	private function updateLight():Void
@@ -81,8 +92,16 @@ class PlayerFairy extends Fairy
 	
 	private function heart():Void
 	{
-		if (Math.random() < 0.5) HXP.scene.add(new HeartParticle(x + 4, y + 4, true));
-		else HXP.scene.add(new HeartParticle(partner.x + 4, partner.y + 10, false));
+		if (Math.random() < 0.5)
+		{
+			HXP.scene.add(new HeartParticle(x + 4, y + 4, true));
+			sfxHeart1.play(0.25);
+		}
+		else
+		{
+			HXP.scene.add(new HeartParticle(partner.x + 4, partner.y + 10, false));
+			sfxHeart2.play(0.25);
+		}
 	}
 	
 }

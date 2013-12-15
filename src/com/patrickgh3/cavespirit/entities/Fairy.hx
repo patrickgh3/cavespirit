@@ -3,6 +3,7 @@ package com.patrickgh3.cavespirit.entities;
 import com.haxepunk.Entity;
 import com.haxepunk.graphics.Spritemap;
 import com.haxepunk.HXP;
+import com.haxepunk.Sfx;
 import com.patrickgh3.cavespirit.scenes.GameScene;
 import flash.geom.Point;
 
@@ -21,6 +22,8 @@ class Fairy extends Entity
 	private var light:Light;
 	private var movingextra:Bool = false; // to prevent getting stuck on corners, move until past the corner, then stop.
 	private var movingextracount:Int = 0;
+	private var lastframe:Int;
+	private var sfxFlap:Sfx;
 	
 	private static inline var maxscale:Float = 1;
 	
@@ -38,6 +41,7 @@ class Fairy extends Entity
 		height = 8;
 		graphic.x = -4;
 		graphic.y = -4;
+		sfxFlap = new Sfx("snd/flap.wav");
 	}
 	
 	override public function update():Void
@@ -101,6 +105,14 @@ class Fairy extends Entity
 			movingextra = false;
 			movingextracount = 0;
 		}
+		
+		if (sprite.frame == 2 && lastframe != 2) flapsound();
+		lastframe = sprite.frame;
+	}
+	
+	private function flapsound():Void
+	{
+		if (onCamera) sfxFlap.play(0.25);
 	}
 	
 	private function flyToPoint(x:Int, y:Int):Void

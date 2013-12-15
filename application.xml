@@ -21,6 +21,7 @@
 	<icon path="assets/openfl.svg" />
 	<assets path="assets/graphics" rename="gfx" />
 	<assets path="assets/levels" rename="lvl" />
+	<assets path="assets/sound" rename="snd" />
 	<assets path="assets/font" rename="font" include="*.ttf" />
 	
 	<!-- optimize output

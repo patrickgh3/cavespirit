@@ -5,6 +5,7 @@ import com.haxepunk.graphics.Image;
 import com.haxepunk.graphics.Backdrop;
 import com.haxepunk.HXP;
 import com.haxepunk.Scene;
+import com.haxepunk.Sfx;
 import com.haxepunk.utils.Input;
 import com.haxepunk.utils.Key;
 import com.patrickgh3.cavespirit.entities.*;
@@ -20,7 +21,9 @@ class GameScene extends Scene
 	public static var human:PlayerHuman;
 	public static var fairy:PlayerFairy;
 	public static var fadeoverlay:FadeOverlay;
-	public var levelindex:Int;
+	public static var levelindex:Int;
+	private var sfxMusic:Sfx;
+	public static var musicstarted:Bool = false;
 	
 	public inline static var prefwidth:Int = 192;
 	public inline static var prefheight:Int = 144;
@@ -29,6 +32,7 @@ class GameScene extends Scene
 	{
 		super();
 		fadeoverlay = new FadeOverlay();
+		sfxMusic = new Sfx("snd/music.wav");
 	}
 	
 	override public function update():Void
@@ -74,15 +78,20 @@ class GameScene extends Scene
 		camera.y = Std.int(y);
 	}
 	
+	public function startMusic():Void
+	{
+		sfxMusic.loop(0.5);
+	}
+	
 	// special levelindex codes
 	// -1 : reload the same level
 	// -2 : load the next sequential level
 	// >=0 : Load the specified level
 	public function changeLevel(levelindex:Int)
 	{
-		if (levelindex == -1) levelindex = this.levelindex;
-		else if (levelindex == -2) levelindex = this.levelindex + 1;
-		this.levelindex = levelindex;
+		if (levelindex == -1) levelindex = GameScene.levelindex;
+		else if (levelindex == -2) levelindex = GameScene.levelindex + 1;
+		GameScene.levelindex = levelindex;
 		
 		removeAll();
 		fairy = null;

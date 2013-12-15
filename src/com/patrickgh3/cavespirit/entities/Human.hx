@@ -3,6 +3,7 @@ package com.patrickgh3.cavespirit.entities;
 import com.haxepunk.Entity;
 import com.haxepunk.graphics.Spritemap;
 import com.haxepunk.HXP;
+import com.haxepunk.Sfx;
 import com.patrickgh3.cavespirit.scenes.GameScene;
 import flash.geom.Point;
 
@@ -18,6 +19,9 @@ class Human extends Entity
 	private var onGround:Bool = false;
 	private var velocity:Point;
 	private var sprite:Spritemap;
+	private var sfxStep:Sfx;
+	private var sfxJump:Sfx;
+	private var lastframe:Int;
 	
 	public function new(x:Int, y:Int, imagesrc:String) 
 	{
@@ -34,6 +38,8 @@ class Human extends Entity
 		height = 20;
 		graphic.x = -2;
 		graphic.y = -4;
+		sfxStep = new Sfx("snd/step.wav");
+		sfxJump = new Sfx("snd/jump.wav");
 	}
 	
 	override public function update():Void
@@ -87,6 +93,23 @@ class Human extends Entity
 		}
 		
 		if (i != 0 && velocity.y != 0) onGround = false;
+		
+		if (sprite.frame == 2 && lastframe != 2) jumpsound();
+		if (sprite.frame == 1 && lastframe != 1) stepsound();
+		if ((sprite.frame == 0 || sprite.frame == 1) && lastframe == 3) stepsound();
+		lastframe = sprite.frame;
+	}
+	
+	private function stepsound():Void
+	{
+		if (this._class != "com.patrickgh3.cavespirit.entities.PlayerHuman") return;
+		if (onCamera) sfxStep.play(0.25);
+	}
+	
+	private function jumpsound():Void
+	{
+		if (this._class != "com.patrickgh3.cavespirit.entities.PlayerHuman") return;
+		if(onCamera) sfxJump.play(0.25);
 	}
 	
 	private function walkRight():Void
