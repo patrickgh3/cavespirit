@@ -3445,6 +3445,5 @@
     <Torch id="18" x="536" y="128" scale="1" />
     <Torch id="19" x="632" y="128" scale="1" />
     <LevelTrigger id="20" x="712" y="120" width="8" height="32" />
-    <LevelTrigger id="6" x="72" y="120" width="8" height="32" />
   </entities>
 </level>

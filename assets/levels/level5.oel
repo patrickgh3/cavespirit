@@ -2100,13 +2100,13 @@
   </tiles>
   <entities>
     <Torch id="0" x="16" y="128" scale="1" />
-    <NPCFairy id="1" x="144" y="88" behavior="0" message="You're lucky&#xD;&#xA;you have&#xD;&#xA;each other." sprite="gfx/fairy_blue.png" />
+    <NPCFairy id="1" x="144" y="88" behavior="0" message="You're lucky&#xA;you have&#xA;each other." sprite="gfx/fairy_blue.png" />
     <Torch id="2" x="168" y="112" scale="1" />
     <Torch id="3" x="304" y="96" scale="1" />
-    <NPCHuman id="4" x="304" y="120" behavior="1" message="Life is&#xD;&#xA;dark and&#xD;&#xA;scary here." sprite="gfx/human_green.png" />
+    <NPCHuman id="4" x="304" y="120" behavior="1" message="Life is&#xA;dark and&#xA;scary here." sprite="gfx/human_green.png" />
     <NPCHuman id="5" x="384" y="144" behavior="1" message="none" sprite="gfx/human_purple.png" />
-    <NPCFairy id="6" x="504" y="104" behavior="0" message="One day I'll&#xD;&#xA;love someone." sprite="gfx/fairy_green.png" />
-    <NPCHuman id="7" x="648" y="160" behavior="1" message="I have loved&#xD;&#xA;and lost." sprite="gfx/human_blue.png" />
+    <NPCFairy id="6" x="504" y="104" behavior="0" message="One day I'll&#xA;love someone." sprite="gfx/fairy_green.png" />
+    <NPCHuman id="7" x="648" y="160" behavior="1" message="I have loved&#xA;and lost." sprite="gfx/human_blue.png" />
     <Torch id="8" x="736" y="136" scale="1" />
     <LevelTrigger id="9" x="728" y="128" width="8" height="32" />
     <PlayerFairy id="11" x="48" y="120" />

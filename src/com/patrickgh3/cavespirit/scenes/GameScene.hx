@@ -27,7 +27,6 @@ class GameScene extends Scene
 	public static var musicstarted:Bool = false;
 	
 	public static var muted:Bool = false;
-	public static var musicfadingout:Bool = true;
 	
 	public inline static var prefwidth:Int = 192;
 	public inline static var prefheight:Int = 144;
@@ -40,6 +39,7 @@ class GameScene extends Scene
 	public static var fairypath:Bool;
 	public static var fairypathcompleted:Bool = false;
 	public static var humanpathcompleted:Bool = false;
+	public static var sv_cheats:Bool = false;
 
 	public function new()
 	{
@@ -55,7 +55,8 @@ class GameScene extends Scene
 		
 		if (levelindex == -4 && Input.pressed(Key.ENTER))
 		{
-			fadeoverlay.fadeout(-3);
+			fadeoverlay.fadeout( -3);
+			musicstarted = false;
 		}
 		
 		soundcount++;
@@ -69,6 +70,8 @@ class GameScene extends Scene
 		tickcount++;
 		if (tickcount == 5) changeLevel(-3);
 		
+		if (sv_cheats)
+		{
 		if (Input.pressed(Key.F)) changeLevel(0);
 		else if (Input.pressed(Key.G)) changeLevel(1);
 		else if (Input.pressed(Key.DIGIT_2)) changeLevel(2);
@@ -78,8 +81,12 @@ class GameScene extends Scene
 		else if (Input.pressed(Key.DIGIT_6)) changeLevel(6);
 		else if (Input.pressed(Key.DIGIT_7)) changeLevel(7);
 		else if (Input.pressed(Key.DIGIT_8)) changeLevel(8);
-		else if (Input.pressed(Key.T)) changeLevel(-3);
-		else if (Input.pressed(Key.C)) changeLevel(-4);
+		else if (Input.pressed(Key.Y)) changeLevel(-3);
+		else if (Input.pressed(Key.C)) changeLevel( -4);
+		}
+		
+		// enable cheats
+		if (Input.check(Key.P) && Input.check(Key.J) && Input.check(Key.T))sv_cheats = true;
 		
 		if (Input.pressed(Key.M))
 		{
@@ -123,7 +130,7 @@ class GameScene extends Scene
 		camera.y = Math.max(0, camera.y);
 		camera.y = Math.min(Level.levelheight * Level.tileheight - prefheight, camera.y);
 		
-		if (Input.pressed(Key.R)) fadeoverlay.fadeout( -1);
+		if (Input.pressed(Key.R) && levelindex != 8 && levelindex != -3 && levelindex != -4) fadeoverlay.fadeout(-1);
 		
 		if (human != null && levelindex == 2 && !musicstarted && human.x > 160)
 		{

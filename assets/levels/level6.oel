@@ -2296,14 +2296,14 @@
     <Torch id="0" x="16" y="128" scale="1" />
     <PlayerFairy id="1" x="40" y="120" />
     <PlayerHuman id="2" x="32" y="128" />
-    <NPCFairy id="3" x="200" y="120" behavior="0" message="Life is&#xD;&#xA;fleeting." sprite="gfx/fairy_yellow.png" />
-    <NPCHuman id="4" x="312" y="128" behavior="1" message="Treasure&#xD;&#xA;every&#xD;&#xA;moment." sprite="gfx/human_blue.png" />
+    <NPCFairy id="3" x="200" y="120" behavior="0" message="Life is&#xA;fleeting." sprite="gfx/fairy_yellow.png" />
+    <NPCHuman id="4" x="312" y="128" behavior="1" message="Treasure&#xA;every&#xA;moment." sprite="gfx/human_blue.png" />
     <NPCFairy id="5" x="304" y="128" behavior="1" message="none" sprite="gfx/fairy_green.png" />
     <NPCFairy id="6" x="392" y="32" behavior="0" message="none" sprite="gfx/fairy_blue.png" />
-    <NPCHuman id="7" x="472" y="40" behavior="1" message="Don't take&#xD;&#xA;anything&#xD;&#xA;for granted." sprite="gfx/human_green.png" />
+    <NPCHuman id="7" x="472" y="40" behavior="1" message="Don't take&#xA;anything&#xA;for granted." sprite="gfx/human_green.png" />
     <Torch id="8" x="456" y="40" scale="1" />
     <NPCHuman id="9" x="568" y="104" behavior="1" message="none" sprite="gfx/human_purple.png" />
-    <NPCFairy id="10" x="656" y="80" behavior="0" message="Nothing is&#xD;&#xA;forever." sprite="gfx/fairy_green.png" />
+    <NPCFairy id="10" x="656" y="80" behavior="0" message="Nothing is&#xA;forever." sprite="gfx/fairy_green.png" />
     <Torch id="11" x="736" y="104" scale="1" />
     <DeathTrigger id="12" x="608" y="144" width="16" height="8" />
     <DeathTrigger id="13" x="232" y="192" width="24" height="8" />

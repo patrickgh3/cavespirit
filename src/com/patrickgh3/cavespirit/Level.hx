@@ -74,13 +74,22 @@ class Level
 			u.color = 0x23384D;
 			//HXP.scene.add(new Entity(64 - 4, 112 - 8, u));
 			
-			y = 96 - 16 + 8;
+			y = 96 - 16;
 			x = 56;
-			HXP.scene.add(new PlayButton(x, y, true));
-			HXP.scene.add(new PlayButton(x + 48, y, false));
 			
-			y = 64;
-			x = 24;
+			if ((GameScene.fairypathcompleted == GameScene.humanpathcompleted) || !GameScene.humanpathcompleted)
+			{
+				HXP.scene.add(new PlayButton(x + 48, y, false));
+				HXP.scene.add(new Entity(x + 48, y, Image.createRect(32, 16, 0xD15232, 0.2)));
+			}
+			if ((GameScene.fairypathcompleted == GameScene.humanpathcompleted) || !GameScene.fairypathcompleted)
+			{
+				HXP.scene.add(new PlayButton(x, y, true));
+				HXP.scene.add(new Entity(x + 0, y, Image.createRect(32, 16, 0xC748B4, 0.12)));
+			}
+			
+			y = 104;
+			x = 72;
 			if (GameScene.fairypathcompleted)
 			{
 				var e:Entity = new Entity(x, y, new Image("gfx/ghosthuman.png"));
@@ -90,14 +99,14 @@ class Level
 			}
 			if (GameScene.fairypathcompleted && GameScene.humanpathcompleted)
 			{
-				var e:Entity = new Entity(x + 32, y + 8, new Image("gfx/ghostheart.png"));
+				var e:Entity = new Entity(x + 20, y + 8, new Image("gfx/ghostheart.png"));
 				cast(e.graphic, Image).alpha = 0.6;
 				cast(e.graphic, Image).blend = BlendMode.LIGHTEN;
 				HXP.scene.add(e);
 			}
 			if (GameScene.humanpathcompleted)
 			{
-				var e:Entity = new Entity(x + 64, y + 8, new Image("gfx/ghostfairy.png"));
+				var e:Entity = new Entity(x + 40, y + 8, new Image("gfx/ghostfairy.png"));
 				cast(e.graphic, Image).alpha = 0.6;
 				cast(e.graphic, Image).blend = BlendMode.LIGHTEN;
 				HXP.scene.add(e);
@@ -106,25 +115,36 @@ class Level
 		}
 		else if (levelindex == -4)
 		{
+			
 			var t:Text = new Text("Spirit Cave");
-			t.size = 8;
+			t.size = 16;
 			t.color = 0x355473;
-			HXP.scene.add(new Entity(48, 24, t));
+			HXP.scene.add(new Entity(48, 24 - 4, t));
 			
 			t = new Text("a game by Patrick Traynor");
 			t.size = 8;
 			t.color = 0x355473;
-			HXP.scene.add(new Entity(48, 48, t));
+			HXP.scene.add(new Entity(48 - 8, 52 - 4, t));
+			
+			t = new Text("for Ludum Dare 28");
+			t.size = 8;
+			t.color = 0x355473;
+			HXP.scene.add(new Entity(48 + 8, 64 - 4, t));
 			
 			t = new Text("powered by HaxePunk");
 			t.size = 8;
 			t.color = 0x355473;
-			HXP.scene.add(new Entity(48, 56, t));
+			HXP.scene.add(new Entity(48 + 1, 76 - 4, t));
 			
 			t = new Text("Thank you for playing.");
 			t.size = 8;
 			t.color = 0x355473;
-			HXP.scene.add(new Entity(48, 56, t));
+			HXP.scene.add(new Entity(48, 88 - 4, t));
+			
+			t = new Text("press enter to continue");
+			t.size = 8;
+			t.color = 0x355473;
+			HXP.scene.add(new Entity(48 - 4, 144 - 32 - 4, t));
 		}
 		else if (levelindex == 1)
 		{

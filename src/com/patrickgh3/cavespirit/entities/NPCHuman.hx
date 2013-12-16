@@ -47,7 +47,7 @@ class NPCHuman extends Human
 	
 	override public function update():Void
 	{
-		if (GameScene.levelindex == 8 && GameScene.fadeoverlay.state == 1 && GameScene.fadeoverlay.count == 38) HXP.scene.remove(this);
+		if (GameScene.fadeoverlay.state == 1 && GameScene.fadeoverlay.count == 68) HXP.scene.remove(this);
 		if (behavior != ai_nothing) count++;
 		if (count == countgoal)
 		{
