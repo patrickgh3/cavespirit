@@ -86,13 +86,13 @@ class PlayerFairy extends Fairy
 			GameScene.fadeoverlay.fadeout(-2);
 		}
 		
-		if (GameScene.levelindex == 2 && count < holdtime + fadetime && GameScene.musicstarted == false)
+		if (GameScene.levelindex == 2 && count < holdtime + fadetime && GameScene.musicstarted == false && GameScene.fadeoverlay.state == FadeOverlay.state_idle)
 		{
 			cast(HXP.scene, GameScene).startMusic();
 			GameScene.musicstarted = true;
 		}
 		
-		if (GameScene.levelindex == 8 && x >= 50 && GameScene.fadeoverlay.state == FadeOverlay.state_idle)
+		if (GameScene.levelindex == 7 && !GameScene.fairypath && x >= 220 && GameScene.fadeoverlay.state == FadeOverlay.state_idle)
 		{
 			HXP.scene.remove(this);
 			HXP.scene.add(new DyingFairy(Std.int(x) - 3, Std.int(y) - 3));

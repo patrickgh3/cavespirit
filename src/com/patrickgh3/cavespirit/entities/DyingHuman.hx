@@ -2,7 +2,9 @@ package com.patrickgh3.cavespirit.entities;
 
 import com.haxepunk.Entity;
 import com.haxepunk.graphics.Spritemap;
+import com.haxepunk.HXP;
 import com.haxepunk.Sfx;
+import com.patrickgh3.cavespirit.scenes.GameScene;
 
 /**
  * Human death animation. :(
@@ -37,6 +39,7 @@ class DyingHuman extends Entity
 		{
 			sprite.setFrame(2);
 			sfxStep.play(0.25);
+			GameScene.sfxMusic.stop();
 		}
 		else if (count == 120)
 		{
@@ -57,6 +60,15 @@ class DyingHuman extends Entity
 		{
 			sprite.setFrame(4);
 			sfxDeath.play(0.25);
+		}
+		else if (count > 270)
+		{
+			sprite.alpha = Math.min((180 - count + 270 + 300) / 180, 1);
+			if (sprite.alpha == 0)
+			{
+				HXP.scene.remove(this);
+				GameScene.human = null;
+			}
 		}
 	}
 	

@@ -24,13 +24,21 @@ class PlayButton extends Entity
 	
 	override public function update():Void
 	{
-		if (!clicked && Input.mousePressed
+		if (!clicked && Input.mousePressed && GameScene.fadeoverlay.state == FadeOverlay.state_idle
 			&& Input.mouseX >= x && Input.mouseX < x + width
 			&& Input.mouseY >= y && Input.mouseY < y + height)
 		{
 			clicked = true;
-			if (fairy) GameScene.fadeoverlay.fadeout(0);
-			else GameScene.fadeoverlay.fadeout(1);
+			if (fairy)
+			{
+				GameScene.fairypath = true;
+				GameScene.fadeoverlay.fadeout(0);
+			}
+			else
+			{
+				GameScene.fairypath = false;
+				GameScene.fadeoverlay.fadeout(1);
+			}
 			graphic = new Image("gfx/button2.png");
 		}
 	}

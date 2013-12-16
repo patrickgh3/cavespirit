@@ -23,10 +23,11 @@ class GameScene extends Scene
 	public static var fairy:PlayerFairy;
 	public static var fadeoverlay:FadeOverlay;
 	public static var levelindex:Int;
-	private var sfxMusic:Sfx;
+	public static var sfxMusic:Sfx;
 	public static var musicstarted:Bool = false;
 	
 	public static var muted:Bool = false;
+	public static var musicfadingout:Bool = true;
 	
 	public inline static var prefwidth:Int = 192;
 	public inline static var prefheight:Int = 144;
@@ -35,6 +36,8 @@ class GameScene extends Scene
 	private var sfxDrip:Sfx;
 	private var soundcount:Int = 0;
 	private var soundcountgoal:Int = 1;
+	
+	public static var fairypath:Bool;
 
 	public function new()
 	{
@@ -74,11 +77,12 @@ class GameScene extends Scene
 			if (muted)
 			{
 				muted = false;
+				sfxMusic.loop();
 			}
 			else if (!muted)
 			{
 				muted = true;
-				stopMusic();
+				sfxMusic.stop();
 			}
 		}
 		
@@ -148,11 +152,6 @@ class GameScene extends Scene
 		sfxMusic.loop(0.5);
 	}
 	
-	public function stopMusic():Void
-	{
-		// TODO: fade out!!
-	}
-	
 	// special levelindex codes
 	// -1 : reload the same level
 	// -2 : load the next sequential level
@@ -160,8 +159,22 @@ class GameScene extends Scene
 	// >=0 : Load the specified level
 	public function changeLevel(levelindex:Int)
 	{
-		if (levelindex == -1) levelindex = GameScene.levelindex;
-		else if (levelindex == -2) levelindex = GameScene.levelindex + 1;
+		if (GameScene.levelindex == 0 && levelindex == -2)
+		{
+			if (fairypath) levelindex = 1;
+			else levelindex = 2;
+		}
+		else if (GameScene.levelindex == 1 && levelindex == -2)
+		{
+			if (fairypath) levelindex = 2;
+			else levelindex = 0;
+		}
+		else
+		{
+			if (levelindex == -1) levelindex = GameScene.levelindex;
+			else if (levelindex == -2) levelindex = GameScene.levelindex + 1;
+		}
+		
 		GameScene.levelindex = levelindex;
 		
 		removeAll();

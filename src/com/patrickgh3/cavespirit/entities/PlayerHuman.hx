@@ -55,12 +55,12 @@ class PlayerHuman extends Human
 			GameScene.fadeoverlay.fadeout(-2);
 		}
 		
-		if (GameScene.levelindex == 7 && x > 32) jumpdisabled = true;
+		if (GameScene.levelindex == 7 && GameScene.fairypath && x > 193) jumpdisabled = true;
 		
-		if (GameScene.levelindex == 7 && x >= 40 && GameScene.fadeoverlay.state == FadeOverlay.state_idle)
+		if (GameScene.levelindex == 7 && GameScene.fairypath && x >= 220 && GameScene.fadeoverlay.state == FadeOverlay.state_idle)
 		{
 			HXP.scene.remove(this);
-			HXP.scene.add(new DyingHuman(Std.int(x) - 6, Std.int(y) - 4));
+			HXP.scene.add(new DyingHuman(Std.int(x) - 6, 104));
 			GameScene.fairy.partner = null;
 		}
 	}
