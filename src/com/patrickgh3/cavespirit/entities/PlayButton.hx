@@ -20,6 +20,7 @@ class PlayButton extends Entity
 		graphic = new Image("gfx/button1.png");
 		width = 32;
 		height = 16;
+		clicked = false;
 	}
 	
 	override public function update():Void

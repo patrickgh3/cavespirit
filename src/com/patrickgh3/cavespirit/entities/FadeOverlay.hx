@@ -10,7 +10,7 @@ import com.patrickgh3.cavespirit.scenes.GameScene;
  */
 class FadeOverlay extends Entity
 {
-	private var count:Int = 0;
+	public var count:Int = 0;
 	private var fadetime:Int = 40;
 	private var image:Image;
 	public var state:Int;
@@ -59,10 +59,13 @@ class FadeOverlay extends Entity
 	
 	public function fadeout(targetlevel:Int):Void
 	{
+		//if (GameScene.levelindex == -3) fadetime = 180;
+		//else fadetime = 40;
 		this.targetlevel = targetlevel;
 		if (state != state_idle) return;
 		state = state_fadeout;
 		image.alpha = 0;
+		
 	}
 	
 	public function fadein():Void

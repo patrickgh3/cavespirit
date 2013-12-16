@@ -43,6 +43,7 @@ class PlayerFairy extends Fairy
 	
 	override public function update():Void
 	{
+		if (GameScene.levelindex == 8 && GameScene.fadeoverlay.state == 1 && GameScene.fadeoverlay.count == 38) HXP.scene.remove(this);
 		if (Input.mousePressed && !locked)
 		{
 			super.flyToPoint(Std.int(HXP.camera.x) + Input.mouseX, Std.int(HXP.camera.y) + Input.mouseY);

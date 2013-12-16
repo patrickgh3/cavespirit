@@ -38,6 +38,8 @@ class GameScene extends Scene
 	private var soundcountgoal:Int = 1;
 	
 	public static var fairypath:Bool;
+	public static var fairypathcompleted:Bool = false;
+	public static var humanpathcompleted:Bool = false;
 
 	public function new()
 	{
@@ -50,6 +52,11 @@ class GameScene extends Scene
 	override public function update():Void
 	{
 		super.update();
+		
+		if (levelindex == -4 && Input.pressed(Key.ENTER))
+		{
+			fadeoverlay.fadeout(-3);
+		}
 		
 		soundcount++;
 		if (soundcount == soundcountgoal)
@@ -71,13 +78,15 @@ class GameScene extends Scene
 		else if (Input.pressed(Key.DIGIT_6)) changeLevel(6);
 		else if (Input.pressed(Key.DIGIT_7)) changeLevel(7);
 		else if (Input.pressed(Key.DIGIT_8)) changeLevel(8);
+		else if (Input.pressed(Key.T)) changeLevel(-3);
+		else if (Input.pressed(Key.C)) changeLevel(-4);
 		
 		if (Input.pressed(Key.M))
 		{
 			if (muted)
 			{
 				muted = false;
-				sfxMusic.loop();
+				if (musicstarted && levelindex <= 6) startMusic();
 			}
 			else if (!muted)
 			{
@@ -168,6 +177,12 @@ class GameScene extends Scene
 		{
 			if (fairypath) levelindex = 2;
 			else levelindex = 0;
+		}
+		else if (GameScene.levelindex == 8)
+		{
+			levelindex = -4;
+			if (fairypath) fairypathcompleted = true;
+			else humanpathcompleted = true;
 		}
 		else
 		{

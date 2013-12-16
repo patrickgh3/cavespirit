@@ -12,6 +12,7 @@ class Util
 	
 	public static function collidelevelmask(e:Entity, xoffset:Int = 0, yoffset:Int = 0):Bool
 	{
+		//if (GameScene.levelindex == 8 && GameScene.fadeoverlay.state == 1) return false;
 		e.x += xoffset;
 		e.y += yoffset;
 		if (isoffscreen(e))

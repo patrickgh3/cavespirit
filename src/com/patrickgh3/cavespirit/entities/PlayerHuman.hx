@@ -21,6 +21,7 @@ class PlayerHuman extends Human
 	
 	override public function update():Void
 	{
+		if (GameScene.levelindex == 8 && GameScene.fadeoverlay.state == 1 && GameScene.fadeoverlay.count == 38) HXP.scene.remove(this);
 		if (locked)
 		{
 			sprite.play("idle");

@@ -9,6 +9,7 @@ import com.haxepunk.HXP;
 import com.patrickgh3.cavespirit.entities.*;
 import flash.geom.Rectangle;
 import openfl.Assets;
+import flash.display.BlendMode;
 
 /**
  * Holds info for the level.
@@ -37,6 +38,7 @@ class Level
 		var y:Int;
 		var path:String = "lvl/level" + Std.string(levelindex) + ".oel";
 		if (levelindex == -3) path = "lvl/leveltitle.oel";
+		if (levelindex == -4) path = "lvl/levelcredits.oel";
 		var xml:Xml = Xml.parse(Assets.getText(path)).firstElement();
 		
 		levelwidth = cast(Std.parseInt(xml.get("width")) / tilewidth, Int);
@@ -70,12 +72,59 @@ class Level
 			var u:Text = new Text("Press M to mute");
 			u.size = 8;
 			u.color = 0x23384D;
-			HXP.scene.add(new Entity(64 - 4, 112 - 8, u));
+			//HXP.scene.add(new Entity(64 - 4, 112 - 8, u));
 			
 			y = 96 - 16 + 8;
 			x = 56;
 			HXP.scene.add(new PlayButton(x, y, true));
 			HXP.scene.add(new PlayButton(x + 48, y, false));
+			
+			y = 64;
+			x = 24;
+			if (GameScene.fairypathcompleted)
+			{
+				var e:Entity = new Entity(x, y, new Image("gfx/ghosthuman.png"));
+				cast(e.graphic, Image).alpha = 0.6;
+				cast(e.graphic, Image).blend = BlendMode.LIGHTEN;
+				HXP.scene.add(e);
+			}
+			if (GameScene.fairypathcompleted && GameScene.humanpathcompleted)
+			{
+				var e:Entity = new Entity(x + 32, y + 8, new Image("gfx/ghostheart.png"));
+				cast(e.graphic, Image).alpha = 0.6;
+				cast(e.graphic, Image).blend = BlendMode.LIGHTEN;
+				HXP.scene.add(e);
+			}
+			if (GameScene.humanpathcompleted)
+			{
+				var e:Entity = new Entity(x + 64, y + 8, new Image("gfx/ghostfairy.png"));
+				cast(e.graphic, Image).alpha = 0.6;
+				cast(e.graphic, Image).blend = BlendMode.LIGHTEN;
+				HXP.scene.add(e);
+			}
+			
+		}
+		else if (levelindex == -4)
+		{
+			var t:Text = new Text("Spirit Cave");
+			t.size = 8;
+			t.color = 0x355473;
+			HXP.scene.add(new Entity(48, 24, t));
+			
+			t = new Text("a game by Patrick Traynor");
+			t.size = 8;
+			t.color = 0x355473;
+			HXP.scene.add(new Entity(48, 48, t));
+			
+			t = new Text("powered by HaxePunk");
+			t.size = 8;
+			t.color = 0x355473;
+			HXP.scene.add(new Entity(48, 56, t));
+			
+			t = new Text("Thank you for playing.");
+			t.size = 8;
+			t.color = 0x355473;
+			HXP.scene.add(new Entity(48, 56, t));
 		}
 		else if (levelindex == 1)
 		{
@@ -122,12 +171,14 @@ class Level
 			{
 				x = Std.parseInt(ent.get("x"));
 				y = Std.parseInt(ent.get("y")) + 4;
+				if (levelindex == 8 && GameScene.fairypath) continue;
 				HXP.scene.add(GameScene.human = new PlayerHuman(x, y));
 			}
 			for (ent in layer.elementsNamed("PlayerFairy"))
 			{
 				x = Std.parseInt(ent.get("x"));
 				y = Std.parseInt(ent.get("y"));
+				if (levelindex == 8 && !GameScene.fairypath) continue;
 				HXP.scene.add(GameScene.fairy = new PlayerFairy(x, y));
 			}
 			for (ent in layer.elementsNamed("DeathTrigger"))

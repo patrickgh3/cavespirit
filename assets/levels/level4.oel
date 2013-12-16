@@ -1932,17 +1932,17 @@
     <Torch id="0" x="8" y="144" scale="1" />
     <PlayerHuman id="1" x="32" y="144" />
     <PlayerFairy id="2" x="48" y="136" />
-    <NPCFairy id="3" x="576" y="168" behavior="1" message="Is this&#xD;&#xA;destiny?" sprite="gfx/fairy_green.png" />
+    <NPCFairy id="3" x="576" y="168" behavior="1" message="Is this&#xD;&#xA;destiny?" sprite="gfx/fairy_yellow.png" />
     <NPCHuman id="4" x="584" y="160" behavior="1" message="none" sprite="gfx/human_green.png" />
     <NPCHuman id="5" x="112" y="152" behavior="1" message="I'm lonely." sprite="gfx/human_purple.png" />
     <Torch id="6" x="128" y="120" scale="1" />
-    <NPCFairy id="7" x="304" y="128" behavior="0" message="I wish I could&#xD;&#xA;help someone." sprite="gfx/fairy_yellow.png" />
+    <NPCFairy id="7" x="328" y="128" behavior="0" message="I wish I could&#xD;&#xA;help someone." sprite="gfx/fairy_green.png" />
     <Torch id="8" x="384" y="160" scale="1" />
-    <NPCHuman id="9" x="416" y="160" behavior="1" message="none" sprite="gfx/human_green.png" />
-    <NPCFairy id="10" x="328" y="120" behavior="0" message="none" sprite="gfx/fairy_blue.png" />
+    <NPCHuman id="9" x="416" y="160" behavior="1" message="none" sprite="gfx/human_blue.png" />
+    <NPCFairy id="10" x="360" y="112" behavior="0" message="none" sprite="gfx/fairy_blue.png" />
     <Torch id="11" x="312" y="144" scale="1" />
     <LevelTrigger id="12" x="664" y="144" width="8" height="32" />
-    <Torch id="13" x="648" y="152" scale="1" />
+    <Torch id="13" x="680" y="152" scale="1" />
     <DeathTrigger id="14" x="200" y="208" width="24" height="8" />
     <DeathTrigger id="15" x="456" y="208" width="32" height="8" />
   </entities>

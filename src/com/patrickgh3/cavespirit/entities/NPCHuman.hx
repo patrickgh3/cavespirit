@@ -35,7 +35,7 @@ class NPCHuman extends Human
 		this.message = message;
 		if (message != null)
 		{
-			var t:Text = new Text(message, -48, -8);
+			var t:Text = new Text(message, -32, -8);
 			t.size = 8;
 			text = new Entity(0, 0, t);
 			text.layer = -4;
@@ -47,6 +47,7 @@ class NPCHuman extends Human
 	
 	override public function update():Void
 	{
+		if (GameScene.levelindex == 8 && GameScene.fadeoverlay.state == 1 && GameScene.fadeoverlay.count == 38) HXP.scene.remove(this);
 		if (behavior != ai_nothing) count++;
 		if (count == countgoal)
 		{
